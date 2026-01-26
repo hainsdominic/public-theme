@@ -1,6 +1,6 @@
 {%- assign product_variant = product.selected_or_first_available_variant -%}
 
-<div id="product-item-{{ product.id }}" class="product-item" data-js-product-item> 
+<div id="product-item-{{ product.id }}" class="product-item" data-js-product-item data-collections="{{ product.collections | map: 'handle' | join: ',' }}"> 
 
   {%- liquid
     assign aspect_ratio = settings.product_card_aspect_ratio

@@ -1,4 +1,13 @@
 {{ 'section-main-collection-product-grid.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'collection-filters.js' | asset_url }}" defer></script>
+
+{%- liquid
+  assign has_custom_filters = false
+  assign current_url = request.url | default: ''
+  if current_url contains 'flavor=' or current_url contains 'machine='
+    assign has_custom_filters = true
+  endif
+-%}
 
 {% if section.settings.filters_position == "top" %}
   <div class="container--large" data-js-inert>
@@ -11,8 +20,11 @@
 {% endif %}
 
 <div data-js-inert>
-  
-  {%- paginate collection.products by section.settings.products_number -%}
+
+  {%- liquid
+    assign products_per_page = 999
+  -%}
+  {%- paginate collection.products by products_per_page -%}
     
     <div class="container--large">
 
@@ -57,7 +69,7 @@
               -%}
               <div class="additional-content additional_desktop">
                 {% for gym_collection in section.settings.filter_collection %}
-                    {% render 'collection-item', collection: gym_collection, text_alignment: section.settings.text_alignment, index: custom_index, sizes: sizes, image_aspect_ratio: section.settings.image_aspect_ratio, image_border_radius: section.settings.image_border_radius%}
+                    {% render 'collection-filter-item', collection: gym_collection, filter_type: 'flavor', text_alignment: section.settings.text_alignment, index: custom_index, sizes: sizes, image_aspect_ratio: section.settings.image_aspect_ratio, image_border_radius: section.settings.image_border_radius %}
                 {% endfor %}
               </div>
               {%- if section.settings.filter_collection_machines != blank -%}
@@ -66,7 +78,7 @@
                     Types de machine
                   </label>
                   {% for gym_collection_machine in section.settings.filter_collection_machines %}
-                      {% render 'collection-item', collection: gym_collection_machine, text_alignment: section.settings.text_alignment, index: custom_index, sizes: sizes, image_aspect_ratio: section.settings.image_aspect_ratio, image_border_radius: section.settings.image_border_radius%}
+                      {% render 'collection-filter-item', collection: gym_collection_machine, filter_type: 'machine', text_alignment: section.settings.text_alignment, index: custom_index, sizes: sizes, image_aspect_ratio: section.settings.image_aspect_ratio, image_border_radius: section.settings.image_border_radius %}
                   {% endfor %}
                 </div>
               {%- endif -%}
@@ -79,7 +91,7 @@
                 {%- if section.settings.filter_collection != blank -%}
                   <div class="additional-content additional_mobile">
                     {% for gym_collection in section.settings.filter_collection %}
-                        {% render 'collection-item', collection: gym_collection, text_alignment: section.settings.text_alignment, index: custom_index, sizes: sizes, image_aspect_ratio: section.settings.image_aspect_ratio, image_border_radius: section.settings.image_border_radius%}
+                        {% render 'collection-filter-item', collection: gym_collection, filter_type: 'flavor', text_alignment: section.settings.text_alignment, index: custom_index, sizes: sizes, image_aspect_ratio: section.settings.image_aspect_ratio, image_border_radius: section.settings.image_border_radius %}
                     {% endfor %}
                   </div>
                 {%- endif -%}

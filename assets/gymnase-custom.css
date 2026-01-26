@@ -29,7 +29,8 @@ slider-vertical {
     object-fit: contain!important;
 }
 
-.additional-content a {
+.additional-content a,
+.additional-content button {
     display:flex;
 }
 

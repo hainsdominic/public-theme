@@ -45,10 +45,7 @@
           }
         }
       },
-      "block_order": [
-        "image_WQzqda",
-        "image_wmxkF7"
-      ],
+      "block_order": ["image_WQzqda", "image_wmxkF7"],
       "name": "t:sections.bundle-extra-words.sections.slider.name",
       "settings": {
         "caption": "Découvrez tous les",
@@ -162,11 +159,7 @@
           }
         }
       },
-      "block_order": [
-        "price_UtbJ6z",
-        "title_HJzDPL",
-        "quick_buy_bqqTwn"
-      ],
+      "block_order": ["price_UtbJ6z", "title_HJzDPL", "quick_buy_bqqTwn"],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "heading": "Collection Saint-Valentin",
@@ -207,11 +200,7 @@
           }
         }
       },
-      "block_order": [
-        "price_FFkx4A",
-        "title_NJPfVm",
-        "quick_buy_9ezVxR"
-      ],
+      "block_order": ["price_FFkx4A", "title_NJPfVm", "quick_buy_9ezVxR"],
       "settings": {
         "heading": "Meilleurs vendeurs",
         "subheading": "",
@@ -242,10 +231,7 @@
           "settings": {}
         }
       },
-      "block_order": [
-        "price_CjykVT",
-        "title_qEmkNi"
-      ],
+      "block_order": ["price_CjykVT", "title_qEmkNi"],
       "settings": {
         "heading": "Abonnements & Boîtes",
         "subheading": "",
@@ -285,11 +271,7 @@
           }
         }
       },
-      "block_order": [
-        "price_i3YBH8",
-        "title_yeCywV",
-        "quick_buy_HAijrM"
-      ],
+      "block_order": ["price_i3YBH8", "title_yeCywV", "quick_buy_HAijrM"],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "heading": "Par Café Public",
