@@ -45,12 +45,32 @@
     });
   }
 
+  function getCurrentCollection() {
+    const path = window.location.pathname;
+    const match = path.match(/\/collections\/([^\/\?]+)/);
+    return match ? match[1] : null;
+  }
+
   function handleFilterClick(e) {
     const btn = e.currentTarget;
     const handle = btn.dataset.filterHandle;
     const type = btn.dataset.filterType;
 
     if (!state[type]) return;
+
+    const isCapsule = handle === 'capsules-1';
+    const currentCollection = getCurrentCollection();
+    const onCapsulesPage = currentCollection === 'capsules-1' || currentCollection === 'capsules';
+
+    if (isCapsule) {
+      window.location.href = 'https://cafepublic.ca/collections/capsules-1';
+      return;
+    }
+
+    if (onCapsulesPage && type === 'machine') {
+      window.location.href = `https://cafepublic.ca/collections/all?machine=${handle}`;
+      return;
+    }
 
     const index = state[type].indexOf(handle);
     if (index === -1) {
@@ -91,24 +111,24 @@
     const products = document.querySelectorAll('[data-js-product-item]');
     const hasFlavorFilters = state.flavor.length > 0;
     const hasMachineFilters = state.machine.length > 0;
+    const hasAnyFilters = hasFlavorFilters || hasMachineFilters;
 
-    console.log('Filter state:', state);
+    if (!hasAnyFilters) {
+      products.forEach(product => product.classList.remove('filter-hidden'));
+      return;
+    }
+
+    let visibleCount = 0;
 
     products.forEach(product => {
       const collectionsAttr = product.dataset.collections || '';
       const productCollections = collectionsAttr.split(',').filter(Boolean);
-      console.log('Product collections:', product.id, productCollections);
-
-      if (productCollections.includes('capsules') || productCollections.includes('capsules-1')) {
-        product.classList.remove('filter-hidden');
-        return;
-      }
 
       let matchesFlavor = true;
       let matchesMachine = true;
 
       if (hasFlavorFilters) {
-        matchesFlavor = state.flavor.some(handle => productCollections.includes(handle));
+        matchesFlavor = state.flavor.every(handle => productCollections.includes(handle));
       }
 
       if (hasMachineFilters) {
@@ -119,10 +139,12 @@
 
       if (shouldShow) {
         product.classList.remove('filter-hidden');
+        visibleCount++;
       } else {
         product.classList.add('filter-hidden');
       }
     });
+
   }
 
   if (document.readyState === 'loading') {

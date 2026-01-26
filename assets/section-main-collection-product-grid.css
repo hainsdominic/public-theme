@@ -46,20 +46,19 @@
   display: block;
   width: 100%;
   background: none;
-  border: 2px solid transparent;
+  border: none;
   padding: 0;
   cursor: pointer;
-  border-radius: var(--border-radius);
-  transition: border-color 0.2s ease, opacity 0.2s ease;
   text-align: center;
   color: inherit;
   font: inherit;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 .collection-filter-btn:hover {
   opacity: 0.8;
 }
 .collection-filter-btn.active {
-  border-color: var(--color-text);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .collection-filter-btn .card__image {
   border-radius: var(--border-radius);
