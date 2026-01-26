@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.refactor_words.labels.header_group",
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "blocks": {
+        "content": {
+          "type": "content",
+          "settings": {
+            "text": "Livraison gratuite 35$ et plus au Québec",
+            "link": "",
+            "target": false
+          }
+        }
+      },
+      "block_order": [
+        "content"
+      ],
+      "settings": {
+        "visibility": "all",
+        "show_locale_selector": true,
+        "show_country_selector": true,
+        "show_social_icons": true,
+        "bar_bgcolor": "#4b2815",
+        "bar_txtcolor": "#ffffff",
+        "border_color": "rgba(0,0,0,0)"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "menu_PP3ftj": {
+          "type": "menu",
+          "settings": {
+            "linklist": "main-menu-1"
+          }
+        }
+      },
+      "block_order": [
+        "menu_PP3ftj"
+      ],
+      "settings": {
+        "logo_src": "shopify://shop_images/Group.png",
+        "logo_height": 54,
+        "logo_mobile_src": "shopify://shop_images/Group.png",
+        "logo_mobile_height": 40,
+        "style": "one-row",
+        "menu_type": "classic",
+        "alignment": "left",
+        "label_style": "tooltip",
+        "real_sticky_header": true,
+        "sticky_header": true,
+        "show_header_border_bottom": false,
+        "show_header_border_top": false,
+        "hide_search": false,
+        "hide_cart": false,
+        "custom_icon_select": "no-icon",
+        "label_text": "",
+        "custom_icon_link": "",
+        "open_in_new_window": false,
+        "header_absolute_homepage": false,
+        "header_absolute_collection": false,
+        "header_absolute_custom": "",
+        "color_text_header": "#fffff9",
+        "hide_header_border": true,
+        "use_default_header": "",
+        "show_locale_selector": true,
+        "show_country_selector": true,
+        "show_social_icons": true
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ]
+}

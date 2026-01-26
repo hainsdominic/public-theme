@@ -1,0 +1,579 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "center": false,
+        "page_cover_metafield": "",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "rich_text_GafqbL": {
+      "type": "rich-text",
+      "blocks": {
+        "title_aYyzjW": {
+          "type": "title",
+          "settings": {
+            "title": "Café Public veut augmenter la visibilité du café de spécialité",
+            "title_size": "heading-size--regular",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_TDxaF6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Café Public a été créé en raison de notre amour pour le café de spécialité et le travail exceptionnel des torréfacteurs.</p><p>Nous voulons offrir une <strong>plateforme aux torréfacteurs pour qu'ils puissent mettre de l'avant </strong>leurs produits et augmenter leur visibilité face aux consommateurs.</p><p>Chez Café Public, nous opérons de <strong>manière différente pour assurer que les produits vous soient livrés dans leur état optimal.</strong> Lorsque vous passez une commande sur notre site web, celle-ci est directement transférée au torréfacteur en question et nous nous occupons de récupérer tous les sacs pour vous envoyer vos produits dans une seule boîte.</p><p>En fonctionnant ainsi, nous pouvons assurer <strong>une fraîcheur optimale du café et vous offrir un catalogue de produits en constante évolution.</strong> De plus, cette approche nous permet d’agrandir notre catalogue rapidement pour vous offrir une sélection inégalée. Ce fonctionnement est optimal pour maintenir un produit de qualité et frais, mais peut engendrer certains délais de livraison.</p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_aYyzjW",
+        "text_TDxaF6"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/6963730-hd_1080_1920_24fps.mp4",
+        "video_controls": false,
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": true,
+        "is_fullwidth": false,
+        "text_alignment": "horizontal-center",
+        "spacing": 24,
+        "color_background_main": "#edfeff",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "color_hide_borders": false,
+        "gutter_decrease": false,
+        "remove_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "rich_text_GPNyWE": {
+      "type": "rich-text",
+      "blocks": {
+        "title_k9Drhp": {
+          "type": "title",
+          "settings": {
+            "title": "Qu'est ce que le café de spécialité?",
+            "title_size": "heading-size--small",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_tAj66B": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Un café de spécialité désigne un café de haute qualité, généralement <strong>cultivé dans des conditions optimales et récolté avec soin pour préserver son goût unique</strong>. Ces cafés se distinguent par leur traçabilité, c'est-à-dire que l'on connaît l'origine précise des grains (pays, région, ferme), ainsi que les méthodes de culture et de transformation utilisées.</p><p>Lorsqu'un café est classé comme \"de spécialité\", il a obtenu <strong>une note d’au moins 80 points sur 100 selon les standards de la </strong><em><strong>Specialty Coffee Association</strong></em><strong> (SCA).</strong> Ce classement est basé sur des critères tels que la complexité des arômes, l'acidité, le corps, l'équilibre et l'absence de défauts dans le grain.</p><p>Les cafés de spécialité sont souvent <strong>torréfiés de manière artisanale pour faire ressortir des profils de saveur distincts,</strong> avec des notes pouvant aller du fruité, floral, épicé, jusqu’au chocolaté ou caramélisé. Les torréfacteurs et baristas travaillent généralement en étroite collaboration avec les producteurs pour garantir une qualité exceptionnelle à chaque étape, de la ferme à la tasse.</p><p><strong>Ce type de café se distingue également par son approche durable et éthique. </strong>Souvent, les producteurs sont rémunérés de manière juste pour leur travail, avec un accent mis sur le commerce direct et équitable. La culture biologique ou respectueuse de l’environnement est aussi un aspect fréquemment associé aux cafés de spécialité.</p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_k9Drhp",
+        "text_tAj66B"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/7116390-uhd_2160_3840_25fps.mp4",
+        "video_controls": false,
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": true,
+        "is_fullwidth": false,
+        "text_alignment": "horizontal-center",
+        "spacing": 24,
+        "color_background_main": "#edfeff",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "color_hide_borders": false,
+        "gutter_decrease": false,
+        "remove_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "info_tabs_PRA8Ep": {
+      "type": "info-tabs",
+      "blocks": {
+        "tab_M8h9Hi": {
+          "type": "tab",
+          "settings": {
+            "title": "Torréfaction Légère",
+            "caption": "<p><strong>Couleur</strong> : Brun clair, sans aucune trace d'huile en surface.</p><p><strong>Température</strong> : Entre 180 et 205 °C, arrêtée juste après le premier « crack » (craquement du grain).</p><p><strong>Arômes et saveurs</strong> : La torréfaction légère préserve davantage les arômes d'origine du café, reflétant les caractéristiques spécifiques du terroir, telles que l'altitude, la variété botanique, et les méthodes de traitement des grains.</p><ul><li><strong>Arômes typiques</strong> : Notes fruitées (agrumes, baies), florales (jasmin, rose), acidité vive et complexe.</li><li><strong>Profil</strong> : Un corps plus léger, une acidité élevée, avec des saveurs vibrantes et lumineuses. On peut y trouver des notes de fruits, de fleurs, de miel et parfois même des épices douces.</li><li><strong>Exemple</strong> : Cafés d’origine éthiopienne ou kenyane, réputés pour leurs profils fruités et floraux.</li></ul>",
+            "image": "shopify://shop_images/pexels-cottonbro-4820734.jpg",
+            "icon": "star"
+          }
+        },
+        "tab_rDg8CJ": {
+          "type": "tab",
+          "settings": {
+            "title": "Torréfaction Moyenne",
+            "caption": "<p><strong>Couleur</strong> : Brun moyen, avec très peu ou pas d'huile en surface.</p><p><strong>Température</strong> : Entre 210 et 220 °C, entre le premier et le second « crack ».</p><p><strong>Arômes et saveurs</strong> : Le café garde encore certains arômes d'origine, mais la torréfaction commence à ajouter ses propres caractéristiques, notamment une rondeur accrue et un équilibre entre acidité, douceur et amertume.</p><ul><li><strong>Arômes typiques</strong> : Notes chocolatées, caramélisées, noix, sucre brun.</li><li><strong>Profil</strong> : Un corps plus rond et un équilibre harmonieux entre acidité, douceur et amertume. On y retrouve des saveurs de chocolat, caramel, fruits cuits, avec parfois un soupçon de fruits secs ou d'épices douces.</li><li><strong>Exemple</strong> : Les cafés d'Amérique centrale ou du Sud (comme les cafés du Guatemala ou de Colombie) sont souvent torréfiés de cette manière pour un profil équilibré.<strong>Arômes typiques</strong> : Notes chocolatées, caramélisées, noix, sucre brun.</li></ul>",
+            "image": "shopify://shop_images/pexels-fajrinugroho-19140876.jpg",
+            "icon": "star"
+          }
+        },
+        "tab_ecKLcC": {
+          "type": "tab",
+          "settings": {
+            "title": "Torréfaction Foncée",
+            "caption": "<p><strong>Couleur</strong> : Brun très foncé à noir, souvent avec de l'huile en surface due à la chaleur intense.</p><p><strong>Température</strong> : Entre 225 et 240 °C, atteignant ou dépassant le second « crack ».</p><p><strong>Arômes et saveurs</strong> : La torréfaction prend le dessus sur les arômes d'origine du grain, introduisant des notes riches et intenses issues de la caramélisation des sucres et de la dégradation des fibres.</p><ul><li><strong>Arômes typiques</strong> : Notes de chocolat noir, fumé, bois brûlé, épices, parfois légèrement amères.</li><li><strong>Profil</strong> : Un corps lourd, une acidité très faible, avec des saveurs dominantes de chocolat noir, de cacao, de fumé, parfois même des notes de cendre ou de pain grillé. La douceur tend à disparaître au profit d'une amertume plus prononcée.</li><li><strong>Exemple</strong> : Cafés de Sumatra ou des Caraïbes, où une torréfaction foncée fait ressortir des notes robustes et épicées.</li></ul>",
+            "image": "shopify://shop_images/pexels-sarah-33270-122370.jpg",
+            "icon": "star"
+          }
+        }
+      },
+      "block_order": [
+        "tab_M8h9Hi",
+        "tab_rDg8CJ",
+        "tab_ecKLcC"
+      ],
+      "settings": {
+        "heading": "Degrés de torréfaction",
+        "subheading": "",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "desktop_layout": "third",
+        "image_position": "left",
+        "image_aspect_ratio": "1",
+        "border_radius": 0,
+        "style": "list",
+        "autoplay_active": false,
+        "autoplay": 5,
+        "section_background_color": "#edfeff",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_mXMA67": {
+      "type": "text-columns",
+      "blocks": {
+        "text_8ghAdn": {
+          "type": "text",
+          "settings": {
+            "title": "Qualité des grains",
+            "caption": "<p>Le café de spécialité se distingue par sa qualité supérieure, avec des grains cultivés dans des conditions optimales, souvent à haute altitude, et notés par des experts. Il doit obtenir une note de plus de 80 sur 100 de la SCA (Specialty Coffee Association), tandis que le café commercial est produit en masse sans critères aussi stricts.</p>",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "text_UE6XAd": {
+          "type": "text",
+          "settings": {
+            "title": "Arômes et saveurs",
+            "caption": "<p>Le café de spécialité est torréfié pour mettre en valeur ses arômes uniques et subtils, tandis que le café commercial est souvent torréfié à haute température pour un goût uniforme, masquant les subtilités du grain.</p>",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "text_twVgBn": {
+          "type": "text",
+          "settings": {
+            "title": "Durabilité et traçabilité",
+            "caption": "<p>Enfin, la chaîne d'approvisionnement du café de spécialité est plus éthique et transparente, offrant un prix équitable aux producteurs, contrairement au café commercial, qui suit des pratiques plus industrielles avec peu de traçabilité.</p>",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "text_8ghAdn",
+        "text_UE6XAd",
+        "text_twVgBn"
+      ],
+      "settings": {
+        "heading": "Café de spécialité vs. Café commercial",
+        "subheading": "",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "grid-3 grid-lap-1",
+        "block_text_alignment": "text-align--left",
+        "border_radius": 0,
+        "hide_borders": true,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "divider_pVqTxf": {
+      "type": "divider",
+      "settings": {
+        "height": 1,
+        "is_fullwidth": true,
+        "color": "#fffff9",
+        "style": "solid",
+        "gutter_decrease": false,
+        "remove_margin": false,
+        "remove_bottom_margin": false,
+        "decrease_bottom_margin": false
+      }
+    },
+    "before_after_t9phii": {
+      "type": "before-after",
+      "blocks": {
+        "image_bmnyEc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-cottonbro-4820677.jpg",
+            "label": ""
+          }
+        },
+        "image_whJebL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-michael-burrows-7125545_1.jpg",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_bmnyEc",
+        "image_whJebL"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "horizontal",
+        "invert_layout": false,
+        "desktop_height": "before-after--desktop-medium",
+        "mobile_height": "before-after--mobile-medium",
+        "color_style": "dark",
+        "border_radius": 30,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_images_QVRFWJ": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_CYbMBR": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "#e7ccf5",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/1_40bcd290-5c53-467c-990a-ec2ac1e43919.png",
+            "title": "Acidulé",
+            "caption": "Les cafés acidulés ont souvent des notes d'agrumes et une grande fraîcheur",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_ntjXiK": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "#cf1440",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/2_1d5d935a-cca8-4153-9f07-2fe6e01182f7.png",
+            "title": "Fruité",
+            "caption": "Les cafés fruités ont souvent des notes de petits fruits et une texture très juteuse",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_xBQiFC": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "#f6b232",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/3_6baf1337-a2eb-4ba1-aa0d-1dea3bb156d8.png",
+            "title": "Caramélisé",
+            "caption": "Les cafés caramélisés ont souvent une sensation onctueuse et des notes sucrées",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_mPpqVK": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "#934f01",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/4_d02ab185-ddf7-4660-9e57-6b9b06d6fc6e.png",
+            "title": "Praliné",
+            "caption": "Les cafés pralinés rappellent souvent les arômes de noix et sont assez balancés.",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_RTtqVK": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "#512c02",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/5_8b2e4936-d861-454e-84b4-30ead0a9b608.png",
+            "title": "Chocolaté",
+            "caption": "Les cafés chocolatés ont souvent une texture riche et des notes de chocolat noir",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_NMyyt4": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "#1e1000",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/6_ec336b37-3b57-441a-b47e-9b0e77104ba4.png",
+            "title": "Corsé",
+            "caption": "Les cafés corsés ont souvent des notes fumées et une bonne dose d'amertume",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_CYbMBR",
+        "image_ntjXiK",
+        "image_xBQiFC",
+        "image_mPpqVK",
+        "image_RTtqVK",
+        "image_NMyyt4"
+      ],
+      "settings": {
+        "gymnase_special": true,
+        "gymnase_special_cols": true,
+        "heading": "Nos profils de saveur",
+        "subheading": "",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "text_alignment": "text-align--center",
+        "style": "slider",
+        "layout": "grid-3 grid-lap-2 grid-palm-1",
+        "image_aspect_ratio": "1",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_images_xkAhCW": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_9MmHkA": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "rgba(0,0,0,0)",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/4_909b7e81-9a8c-46ef-a69e-b5cff1c7adca.png",
+            "title": "Praliné",
+            "caption": "Les cafés pralinés rappellent souvent les arômes de noix et sont assez balancés.",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_WNNx3T": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "rgba(0,0,0,0)",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/5_8b2e4936-d861-454e-84b4-30ead0a9b608.png",
+            "title": "Chocolaté",
+            "caption": "Les cafés chocolatés ont souvent une texture riche et des notes de chocolat noir",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_BBAbDy": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "rgba(0,0,0,0)",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/6_ec336b37-3b57-441a-b47e-9b0e77104ba4.png",
+            "title": "Corsé",
+            "caption": "Les cafés corsés ont souvent des notes fumés et une bonne dose d'amertume",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_9MmHkA",
+        "image_WNNx3T",
+        "image_BBAbDy"
+      ],
+      "disabled": true,
+      "settings": {
+        "gymnase_special": true,
+        "gymnase_special_cols": false,
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "text_alignment": "text-align--center",
+        "style": "slider",
+        "layout": "grid-3 grid-lap-2 grid-palm-1",
+        "image_aspect_ratio": "1",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_images_MwypYF": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_LCMC3w": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "rgba(0,0,0,0)",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/x_ce22c327-8f5f-415e-8ad5-d7958f5666e8.png",
+            "title": "Espresso",
+            "caption": "Les cafés classifiés espresso ont souvent des arômes de chocolat, noix et caramel, en plus de bien s'agencer avec du lait",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_YjLbg6": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "rgba(0,0,0,0)",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/xx_4d45450a-5270-4b6d-aebf-fb2b01891b99.png",
+            "title": "Filtre Classique",
+            "caption": "Les cafés classifiés filtre classique sont souvent plus corsés avec des notes de chocolat noir, fumé et noix",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_gUh8GT": {
+          "type": "image",
+          "settings": {
+            "gymnase_color_pill_background": "rgba(0,0,0,0)",
+            "gymnase_special_no_img": false,
+            "image": "shopify://shop_images/xxx.png",
+            "title": "Filtre Découverte",
+            "caption": "Les cafés classifiés filtre découverte (Pour Over, V60, Chemex, etc.) sont souvent beaucoup plus légers en torréfaction avec des arômes acidulés et fruités",
+            "link": "",
+            "open_in_new_window": false,
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_LCMC3w",
+        "image_YjLbg6",
+        "image_gUh8GT"
+      ],
+      "settings": {
+        "gymnase_special": true,
+        "gymnase_special_cols": false,
+        "heading": "Types de machine",
+        "subheading": "",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "text_alignment": "text-align--center",
+        "style": "slider",
+        "layout": "grid-3 grid-lap-2 grid-palm-1",
+        "image_aspect_ratio": "1",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_GafqbL",
+    "rich_text_GPNyWE",
+    "info_tabs_PRA8Ep",
+    "text_columns_mXMA67",
+    "divider_pVqTxf",
+    "before_after_t9phii",
+    "text_columns_images_QVRFWJ",
+    "text_columns_images_xkAhCW",
+    "text_columns_images_MwypYF"
+  ]
+}

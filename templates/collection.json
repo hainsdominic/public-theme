@@ -1,0 +1,154 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_RgdXE3": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_CrPgiW": {
+          "type": "collection",
+          "settings": {
+            "collection": "frais-et-floral",
+            "image": "shopify://shop_images/1_40bcd290-5c53-467c-990a-ec2ac1e43919.png"
+          }
+        },
+        "collection_T69FcH": {
+          "type": "collection",
+          "settings": {
+            "collection": "juteux-et-fruite",
+            "image": "shopify://shop_images/2_1d5d935a-cca8-4153-9f07-2fe6e01182f7.png"
+          }
+        },
+        "collection_8eM7TJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "sucre-et-caramel",
+            "image": "shopify://shop_images/3_6baf1337-a2eb-4ba1-aa0d-1dea3bb156d8.png"
+          }
+        },
+        "collection_tQGEVJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "rond-et-chocolate",
+            "image": "shopify://shop_images/4_909b7e81-9a8c-46ef-a69e-b5cff1c7adca.png"
+          }
+        },
+        "collection_aKqUEn": {
+          "type": "collection",
+          "settings": {
+            "collection": "riche-et-chocolat-noir",
+            "image": "shopify://shop_images/5_8b2e4936-d861-454e-84b4-30ead0a9b608.png"
+          }
+        },
+        "collection_Rj4hye": {
+          "type": "collection",
+          "settings": {
+            "collection": "corse-et-fume",
+            "image": "shopify://shop_images/6_ec336b37-3b57-441a-b47e-9b0e77104ba4.png"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CrPgiW",
+        "collection_T69FcH",
+        "collection_8eM7TJ",
+        "collection_tQGEVJ",
+        "collection_aKqUEn",
+        "collection_Rj4hye"
+      ],
+      "disabled": true,
+      "settings": {
+        "gym_bigger_pastilles": true,
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1.33333",
+        "image_border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": true,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description_breadcrumbs": false,
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "quick_buy_HWKLtU": {
+          "type": "quick_buy",
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": false,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "title",
+        "quick_buy_HWKLtU"
+      ],
+      "settings": {
+        "filter_collection": [
+          "frais-et-floral",
+          "juteux-et-fruite",
+          "sucre-et-caramel",
+          "rond-et-chocolate",
+          "riche-et-chocolat-noir",
+          "corse-et-fume"
+        ],
+        "filter_collection_machines": [
+          "espresso",
+          "filtre",
+          "capsules",
+          "capsules-1"
+        ],
+        "gym_two_lines": true,
+        "products_number": 24,
+        "enable_filtering": false,
+        "enable_sorting": true,
+        "image_filter_layout": "onecolumn",
+        "filters_position": "sidebar",
+        "layout_desktop": "four-columns",
+        "layout_mobile": "grid-palm-2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_RgdXE3",
+    "banner",
+    "product-grid"
+  ]
+}

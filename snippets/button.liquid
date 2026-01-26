@@ -1,0 +1,25 @@
+{%- liquid
+  if icon == blank
+    assign icon = "arrow-right"
+  endif
+  if label_is_translation == true
+    assign label = label | t
+  else 
+    assign label = label | escape
+  endif 
+-%}
+
+{%- capture element_attributes -%}
+  class="button button--{{ style }} {% if fullwidth %} button--fullwidth {% endif %} button--icon {% if icon_position == 'left' %} button--icon-left {% endif %}" {{ attribute }}
+{%- endcapture -%}
+
+{%- if type == 'button' -%}
+  <button {% if is_submit %} type="submit" {% endif %} {{ element_attributes }}>
+{%- else -%}
+  <a href="{{ link | escape }}" {% if target_blank %} target="_blank" {% endif %} {{ element_attributes }}>
+{%- endif -%}
+
+  <span class="button__icon" role="img" aria-hidden="true">{%- render 'theme-symbols', icon: icon -%}</span>
+  <span class="button__text text-weight--{{ text_weight }} text-size--{{ text_size }}">{{ label }}</span>
+
+{%- if type == 'button' -%} </button> {%- else -%} </a> {%- endif -%}

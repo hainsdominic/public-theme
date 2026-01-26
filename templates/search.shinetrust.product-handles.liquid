@@ -1,0 +1,110 @@
+{%- layout none -%}
+{%- paginate search.results by 1000 -%}
+    [
+    {%- for product in search.results -%}
+        {% assign onSale = false %}
+        {% assign inventory = 0 %}
+        {%- unless forloop.first -%},{%- endunless -%}
+        {
+        "id":{{- product.id -}},
+        "available":{{- product.available | default: false -}},
+        "title":{{- product.title | json -}},
+        "handle":{{- product.handle | json -}},
+        "url":"{{- product.url -}}",
+        "type":{{- product.type | json -}},
+        "price":{{- product.price | default: 0 -}},
+        "price_max":{{- product.price_max | default: 0 -}},
+        "price_min":{{- product.price_min | default: 0 -}},
+        "compare_at_price":{{- product.compare_at_price | default: 0 -}},
+        "compare_at_price_max": {{- product.compare_at_price_max | default: 0 -}},
+        "compare_at_price_min": {{- product.compare_at_price_min | default: 0 -}},
+        "price_varies": {{- product.price_varies | default: false -}},
+        "compare_at_price_varies": {{- product.compare_at_price_varies | default: false -}},
+        "created_at":"{{- product.created_at | date: "%s%L" -}}",
+        "published_at":"{{- product.published_at | date: "%s%L" -}}",
+        "tags": [{% for tag in product.tags %}{%- unless forloop.first -%},{%- endunless -%}{{- tag | json -}}{% endfor %}],
+        "vendor": {{- product.vendor | json -}},
+        "featured_image":"{{- product.featured_image -}}",
+        "featured_media":"{% if product.featured_media %}{{- product.featured_media | image_url: width: 450 -}}{% endif %}",
+        "images":[
+        {%- for image in product.images -%}{%- unless forloop.first -%},
+        {%- endunless -%}{"id":{{- image.id -}},
+            "src":{{- image.src | json -}}}
+        {%- endfor -%}],
+        "collections":{{- product.collections | map: 'id' | json -}},
+        {%- assign selectedVariant = product.selected_or_first_available_variant -%}
+        {% assign sale_amount = 0 %}
+        {% assign sale_percent = 0 %}
+        {% if selectedVariant.price and selectedVariant.compare_at_price %}
+            {% assign sale_amount = selectedVariant.compare_at_price | minus: selectedVariant.price %}
+            {% if sale_amount > 0 %}
+                {% assign divisor = selectedVariant.compare_at_price | times: 1.0 %}
+                {% assign sale_percent = selectedVariant.compare_at_price | minus: selectedVariant.price | divided_by: divisor | times: 100.0 | round %}
+            {% endif %}
+        {% endif %}
+        "variant": {
+        "id": "{{ selectedVariant.id }}",
+        "title": {{- selectedVariant.title | json -}},
+        "available": {{- selectedVariant.available | default: false -}},
+        "inventory_management": "{{- selectedVariant.inventory_management -}}",
+        "inventory_policy": "{{- selectedVariant.inventory_policy -}}",
+        "inventory_quantity": {{- selectedVariant.inventory_quantity | default: 0 -}},
+        "price": {{- selectedVariant.price | default: 0 -}},
+        "compare_at_price": {{- selectedVariant.compare_at_price | default: 0 -}},
+        "unit_price": "{{- selectedVariant.unit_price -}}",
+        "weight": "{{- selectedVariant.weight -}}",
+        "weight_in_unit": "{{- selectedVariant.weight_in_unit -}}",
+        "weight_unit": "{{- selectedVariant.weight_unit -}}",
+        "sale_amount": {{- sale_amount | money | json -}},
+        "sale_percent": {{- sale_percent | json -}}
+        },
+        "variants":{
+        {%- for variant in product.variants -%}
+            {%- unless forloop.first -%},{%- endunless -%}
+            {% if variant.compare_at_price > variant.price %}
+                {% assign onSale = true %}
+            {% endif %}
+            {% if variant.available and variant.inventory_management != null and variant.inventory_management != '' %}
+                {% if variant.inventory_policy == 'deny' and variant.inventory_quantity > 0 %}
+                    {% assign inventory = inventory | plus: variant.inventory_quantity %}
+                {% elsif variant.inventory_policy == 'continue' %}
+                    {% assign inventory = -1 %}
+                {% endif %}
+            {% elsif variant.available and variant.inventory_management == null %}
+                {% assign inventory = -1 %}
+            {% endif %}
+            {% assign sale_amount = 0 %}
+            {% assign sale_percent = 0 %}
+            {% if variant.price and variant.compare_at_price %}
+                {% assign sale_amount = variant.compare_at_price | minus: variant.price %}
+                {% if sale_amount > 0 %}
+                    {% assign divisor = variant.compare_at_price | times: 1.0 %}
+                    {% assign sale_percent = variant.compare_at_price | minus: variant.price | divided_by: divisor | times: 100.0 | round %}
+                {% endif %}
+            {% endif %}
+            "{{- variant.id -}}": {
+            "id":{{- variant.id -}},
+            "title":{{- variant.title | json }},
+            "name":{{- variant.name | json }},
+            "price":{{- variant.price | default: 0 -}},
+            "compare_at_price":{{- variant.compare_at_price | default: 0 -}},
+            "available":{{- variant.available | default: false -}},
+            "sku":{{- variant.sku | json -}},
+            "weight":"{{- variant.weight -}}",
+            "weight_unit": "{{- variant.weight_unit -}}",
+            "inventory_management": "{{- variant.inventory_management -}}",
+            "inventory_policy": "{{- variant.inventory_policy -}}",
+            "inventory_quantity": {{- variant.inventory_quantity | default: 0 -}},
+            "selected": {%- if variant.selected -%}  {{- variant.selected -}} {%- elsif product.selected_or_first_available_variant.id == variant.id -%} true  {%- else -%} false {%- endif -%},
+            "sale_amount": {{- sale_amount | money | json -}},
+            "sale_percent": {{- sale_percent | json -}}
+            }
+        {%- endfor -%}
+        },
+        "on_sale":{{- onSale -}},
+        "inventory":{{- inventory -}},
+        "options":{{- product.options_with_values | json -}},
+        "has_only_default_variant": {{ product.has_only_default_variant | default: false }}
+        }
+    {%- endfor -%}]
+{%- endpaginate -%}

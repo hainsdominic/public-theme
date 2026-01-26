@@ -1,0 +1,797 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slider_BxHVLb": {
+      "type": "slider",
+      "blocks": {
+        "image_WQzqda": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2326_99fb0a3a-fedb-4240-823c-835c76d2462b.png",
+            "link": "",
+            "offset_width": 40,
+            "offset_x": 0,
+            "offset_y": 5,
+            "hide_on_desk": false,
+            "hide_on_mobile": false,
+            "offset_width_mobile": 80,
+            "offset_x_mobile": 10,
+            "offset_y_mobile": 5,
+            "scroll_speed": 0
+          }
+        },
+        "image_wmxkF7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DSCF8900_2_b9ce2d67-925d-49c4-ad05-2b0790ac7529.png",
+            "link": "",
+            "offset_width": 40,
+            "offset_x": 60,
+            "offset_y": 60,
+            "hide_on_desk": false,
+            "hide_on_mobile": false,
+            "offset_width_mobile": 80,
+            "offset_x_mobile": 10,
+            "offset_y_mobile": 70,
+            "scroll_speed": -2
+          }
+        }
+      },
+      "block_order": [
+        "image_WQzqda",
+        "image_wmxkF7"
+      ],
+      "name": "t:sections.bundle-extra-words.sections.slider.name",
+      "settings": {
+        "caption": "Découvrez tous les",
+        "title": "<p>Cafés des micro-torréfacteurs</p>",
+        "button_label": "Trouvez le café parfait en 2 questions ici",
+        "button_link": "shopify://pages/quiz",
+        "alignment": "horizontal-center align-content--vertical-middle",
+        "title_size": "heading-size--regular",
+        "spacing": 32,
+        "button_style": "solid",
+        "blend_mode": "exclusion",
+        "color_background_main": "#fffff9",
+        "color_text_main": "#ffffff",
+        "border_radius": 0,
+        "add_top_margin": false,
+        "remove_inner_padding": false,
+        "seo_h_tag": "h3"
+      }
+    },
+    "collection_list_xndrFP": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_CLrrXB": {
+          "type": "collection",
+          "settings": {
+            "collection": "frais-et-floral",
+            "image": "shopify://shop_images/1_40bcd290-5c53-467c-990a-ec2ac1e43919.png"
+          }
+        },
+        "collection_hkBJEW": {
+          "type": "collection",
+          "settings": {
+            "collection": "juteux-et-fruite",
+            "image": "shopify://shop_images/2_1d5d935a-cca8-4153-9f07-2fe6e01182f7.png"
+          }
+        },
+        "collection_gCwVPH": {
+          "type": "collection",
+          "settings": {
+            "collection": "sucre-et-caramel",
+            "image": "shopify://shop_images/3_6baf1337-a2eb-4ba1-aa0d-1dea3bb156d8.png"
+          }
+        },
+        "collection_fHLx6t": {
+          "type": "collection",
+          "settings": {
+            "collection": "rond-et-chocolate",
+            "image": "shopify://shop_images/4_909b7e81-9a8c-46ef-a69e-b5cff1c7adca.png"
+          }
+        },
+        "collection_QNLTeQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "riche-et-chocolat-noir",
+            "image": "shopify://shop_images/5_8b2e4936-d861-454e-84b4-30ead0a9b608.png"
+          }
+        },
+        "collection_HGwy8V": {
+          "type": "collection",
+          "settings": {
+            "collection": "corse-et-fume",
+            "image": "shopify://shop_images/6_ec336b37-3b57-441a-b47e-9b0e77104ba4.png"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CLrrXB",
+        "collection_hkBJEW",
+        "collection_gCwVPH",
+        "collection_fHLx6t",
+        "collection_QNLTeQ",
+        "collection_HGwy8V"
+      ],
+      "settings": {
+        "gym_bigger_pastilles": true,
+        "heading": "Commander par profil de saveur",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1.33333",
+        "image_border_radius": 0,
+        "section_background_color": "#fffff9",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "featured_collection_Hiczqa": {
+      "type": "featured-collection",
+      "blocks": {
+        "price_UtbJ6z": {
+          "type": "price",
+          "settings": {}
+        },
+        "title_HJzDPL": {
+          "type": "title",
+          "settings": {}
+        },
+        "quick_buy_bqqTwn": {
+          "type": "quick_buy",
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": false,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "price_UtbJ6z",
+        "title_HJzDPL",
+        "quick_buy_bqqTwn"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "heading": "Collection Saint-Valentin",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "layout_mobile": "grid-palm-2",
+        "products_number": 8,
+        "collection": "collection-saint-valentin",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "featured_collection_ifGty4": {
+      "type": "featured-collection",
+      "blocks": {
+        "price_FFkx4A": {
+          "type": "price",
+          "settings": {}
+        },
+        "title_NJPfVm": {
+          "type": "title",
+          "settings": {}
+        },
+        "quick_buy_9ezVxR": {
+          "type": "quick_buy",
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": false,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "price_FFkx4A",
+        "title_NJPfVm",
+        "quick_buy_9ezVxR"
+      ],
+      "settings": {
+        "heading": "Meilleurs vendeurs",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "layout_mobile": "grid-palm-2",
+        "products_number": 4,
+        "collection": "saveurs",
+        "section_background_color": "#fffff9",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": true,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "featured_collection_hDYrpw": {
+      "type": "featured-collection",
+      "blocks": {
+        "price_CjykVT": {
+          "type": "price",
+          "settings": {}
+        },
+        "title_qEmkNi": {
+          "type": "title",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "price_CjykVT",
+        "title_qEmkNi"
+      ],
+      "settings": {
+        "heading": "Abonnements & Boîtes",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "layout_mobile": "grid-palm-2",
+        "products_number": 4,
+        "collection": "abonnements",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "featured_collection_iegEyz": {
+      "type": "featured-collection",
+      "blocks": {
+        "price_i3YBH8": {
+          "type": "price",
+          "settings": {}
+        },
+        "title_yeCywV": {
+          "type": "title",
+          "settings": {}
+        },
+        "quick_buy_HAijrM": {
+          "type": "quick_buy",
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": false,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "price_i3YBH8",
+        "title_yeCywV",
+        "quick_buy_HAijrM"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "heading": "Par Café Public",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "layout_mobile": "grid-palm-2",
+        "products_number": 4,
+        "collection": "cafe-collectif",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "collection_list_zK9GY4": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_4LCg4c": {
+          "type": "collection",
+          "settings": {
+            "collection": "ambros"
+          }
+        },
+        "collection_y4znq3": {
+          "type": "collection",
+          "settings": {
+            "collection": "anatolia"
+          }
+        },
+        "collection_WUXp7H": {
+          "type": "collection",
+          "settings": {
+            "collection": "appalaches"
+          }
+        },
+        "collection_McRDjq": {
+          "type": "collection",
+          "settings": {
+            "collection": "arbre-a-cafe"
+          }
+        },
+        "collection_p6WhTB": {
+          "type": "collection",
+          "settings": {
+            "collection": "bernard-street-coffee"
+          }
+        },
+        "collection_mAztAh": {
+          "type": "collection",
+          "settings": {
+            "collection": "binocle"
+          }
+        },
+        "collection_rmQUhF": {
+          "type": "collection",
+          "settings": {
+            "collection": "brulerie-aux-quatre-vents"
+          }
+        },
+        "collection_h3A9Tw": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-balade"
+          }
+        },
+        "collection_WA8CJR": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-charlevoix"
+          }
+        },
+        "collection_CTReE8": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-douceur"
+          }
+        },
+        "collection_6tktAi": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-mosa"
+          }
+        },
+        "collection_kgATzg": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-union"
+          }
+        },
+        "collection_6r6W93": {
+          "type": "collection",
+          "settings": {
+            "collection": "canal"
+          }
+        },
+        "collection_UbEm9d": {
+          "type": "collection",
+          "settings": {
+            "collection": "cascara"
+          }
+        },
+        "collection_Lkz7UA": {
+          "type": "collection",
+          "settings": {
+            "collection": "colorfull"
+          }
+        },
+        "collection_Hbkp6R": {
+          "type": "collection",
+          "settings": {
+            "collection": "dispatch"
+          }
+        },
+        "collection_Rr3jLW": {
+          "type": "collection",
+          "settings": {
+            "collection": "dual-microtorrefacteur"
+          }
+        },
+        "collection_HJjCBk": {
+          "type": "collection",
+          "settings": {
+            "collection": "duck-duck-coffee"
+          }
+        }
+      },
+      "block_order": [
+        "collection_4LCg4c",
+        "collection_y4znq3",
+        "collection_WUXp7H",
+        "collection_McRDjq",
+        "collection_p6WhTB",
+        "collection_mAztAh",
+        "collection_rmQUhF",
+        "collection_h3A9Tw",
+        "collection_WA8CJR",
+        "collection_CTReE8",
+        "collection_6tktAi",
+        "collection_kgATzg",
+        "collection_6r6W93",
+        "collection_UbEm9d",
+        "collection_Lkz7UA",
+        "collection_Hbkp6R",
+        "collection_Rr3jLW",
+        "collection_HJjCBk"
+      ],
+      "settings": {
+        "gym_bigger_pastilles": true,
+        "heading": "Commander par torréfacteur",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "collection_list_bJ6miB": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_XBF334": {
+          "type": "collection",
+          "settings": {
+            "collection": "dums"
+          }
+        },
+        "collection_biCTRE": {
+          "type": "collection",
+          "settings": {
+            "collection": "escape"
+          }
+        },
+        "collection_EhtHcR": {
+          "type": "collection",
+          "settings": {
+            "collection": "geogene"
+          }
+        },
+        "collection_gpqyDP": {
+          "type": "collection",
+          "settings": {
+            "collection": "jungle"
+          }
+        },
+        "collection_EbgJgG": {
+          "type": "collection",
+          "settings": {
+            "collection": "kaapeh"
+          }
+        },
+        "collection_JCaQnK": {
+          "type": "collection",
+          "settings": {
+            "collection": "kittel"
+          }
+        },
+        "collection_ff9iT3": {
+          "type": "collection",
+          "settings": {
+            "collection": "kujira"
+          }
+        },
+        "collection_ThcP43": {
+          "type": "collection",
+          "settings": {
+            "collection": "larue"
+          }
+        },
+        "collection_6GdUVG": {
+          "type": "collection",
+          "settings": {
+            "collection": "le-club"
+          }
+        },
+        "collection_eyRi9i": {
+          "type": "collection",
+          "settings": {
+            "collection": "manoir-du-cafe"
+          }
+        },
+        "collection_GCh4Qi": {
+          "type": "collection",
+          "settings": {
+            "collection": "melk"
+          }
+        },
+        "collection_6MwAxf": {
+          "type": "collection",
+          "settings": {
+            "collection": "micro-espresso"
+          }
+        }
+      },
+      "block_order": [
+        "collection_XBF334",
+        "collection_biCTRE",
+        "collection_EhtHcR",
+        "collection_gpqyDP",
+        "collection_EbgJgG",
+        "collection_JCaQnK",
+        "collection_ff9iT3",
+        "collection_ThcP43",
+        "collection_6GdUVG",
+        "collection_eyRi9i",
+        "collection_GCh4Qi",
+        "collection_6MwAxf"
+      ],
+      "settings": {
+        "gym_bigger_pastilles": true,
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "collection_list_ta77TP": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_bDWqfk": {
+          "type": "collection",
+          "settings": {
+            "collection": "monogram-coffee"
+          }
+        },
+        "collection_T4wx86": {
+          "type": "collection",
+          "settings": {
+            "collection": "myriade"
+          }
+        },
+        "collection_fi9nBb": {
+          "type": "collection",
+          "settings": {
+            "collection": "naess"
+          }
+        },
+        "collection_7Jg6e4": {
+          "type": "collection",
+          "settings": {
+            "collection": "nordik"
+          }
+        },
+        "collection_biYePR": {
+          "type": "collection",
+          "settings": {
+            "collection": "pista"
+          }
+        },
+        "collection_wfDTxM": {
+          "type": "collection",
+          "settings": {
+            "collection": "porte-bleue"
+          }
+        },
+        "collection_tef4fc": {
+          "type": "collection",
+          "settings": {
+            "collection": "saint-henri"
+          }
+        },
+        "collection_NRRweR": {
+          "type": "collection",
+          "settings": {
+            "collection": "stimolanti22"
+          }
+        },
+        "collection_zE3kkQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "structure"
+          }
+        },
+        "collection_qQUVma": {
+          "type": "collection",
+          "settings": {
+            "collection": "tokad"
+          }
+        },
+        "collection_xVdn4i": {
+          "type": "collection",
+          "settings": {
+            "collection": "torque"
+          }
+        },
+        "collection_qm3Jgj": {
+          "type": "collection",
+          "settings": {
+            "collection": "torrefacteurs-sans-frontieres"
+          }
+        },
+        "collection_fGpzN8": {
+          "type": "collection",
+          "settings": {
+            "collection": "traffic"
+          }
+        },
+        "collection_3fPP4C": {
+          "type": "collection",
+          "settings": {
+            "collection": "yamabiko"
+          }
+        },
+        "collection_tLJiXp": {
+          "type": "collection",
+          "settings": {
+            "collection": "za-klo"
+          }
+        },
+        "collection_NmcwpM": {
+          "type": "collection",
+          "settings": {
+            "collection": "zab"
+          }
+        },
+        "collection_D4Rihn": {
+          "type": "collection",
+          "settings": {
+            "collection": "94-celsius"
+          }
+        }
+      },
+      "block_order": [
+        "collection_bDWqfk",
+        "collection_T4wx86",
+        "collection_fi9nBb",
+        "collection_7Jg6e4",
+        "collection_biYePR",
+        "collection_wfDTxM",
+        "collection_tef4fc",
+        "collection_NRRweR",
+        "collection_zE3kkQ",
+        "collection_qQUVma",
+        "collection_xVdn4i",
+        "collection_qm3Jgj",
+        "collection_fGpzN8",
+        "collection_3fPP4C",
+        "collection_tLJiXp",
+        "collection_NmcwpM",
+        "collection_D4Rihn"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "gym_bigger_pastilles": true,
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "collection_list_Xfdzca": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_wxkWMq": {
+          "type": "collection",
+          "settings": {
+            "collection": "espresso"
+          }
+        },
+        "collection_BdfDk6": {
+          "type": "collection",
+          "settings": {
+            "collection": "filtre"
+          }
+        },
+        "collection_Jh9WBD": {
+          "type": "collection",
+          "settings": {
+            "collection": "capsules"
+          }
+        },
+        "collection_94JTbF": {
+          "type": "collection",
+          "settings": {
+            "collection": "capsules-1"
+          }
+        }
+      },
+      "block_order": [
+        "collection_wxkWMq",
+        "collection_BdfDk6",
+        "collection_Jh9WBD",
+        "collection_94JTbF"
+      ],
+      "settings": {
+        "gym_bigger_pastilles": true,
+        "heading": "Commander par type de machine",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "section_background_color": "#fffff9",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "divider_qBHkDr": {
+      "type": "divider",
+      "settings": {
+        "height": 1,
+        "is_fullwidth": false,
+        "color": "#fffff9",
+        "style": "solid",
+        "gutter_decrease": false,
+        "remove_margin": false,
+        "remove_bottom_margin": false,
+        "decrease_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "slider_BxHVLb",
+    "collection_list_xndrFP",
+    "featured_collection_Hiczqa",
+    "featured_collection_ifGty4",
+    "featured_collection_hDYrpw",
+    "featured_collection_iegEyz",
+    "collection_list_zK9GY4",
+    "collection_list_bJ6miB",
+    "collection_list_ta77TP",
+    "collection_list_Xfdzca",
+    "divider_qBHkDr"
+  ]
+}

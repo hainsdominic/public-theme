@@ -1,0 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:sections.refactor_words.labels.footer_group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_pEWU9w": {
+          "type": "text",
+          "settings": {
+            "title": "Contact",
+            "image_heading": "shopify://shop_images/Public_Logo_Principal_Couleur-02_29c4c532-4a59-4958-9ef7-255959b9c6a9.jpg",
+            "image_heading_size": 150,
+            "content": "<p>Suivez-nous sur les médias sociaux pour du contenu sur le café de spécialité</p>",
+            "show_social_icons": true
+          }
+        },
+        "payment_EEAmGY": {
+          "type": "payment",
+          "settings": {
+            "title": "Méthodes de paiement supportées",
+            "only_show_custom_icons": false
+          }
+        },
+        "menu_e4RqJM": {
+          "type": "menu",
+          "settings": {
+            "title": "Liens",
+            "menu": "footer",
+            "menu_target": false,
+            "menu_style": true
+          }
+        }
+      },
+      "block_order": [
+        "text_pEWU9w",
+        "payment_EEAmGY",
+        "menu_e4RqJM"
+      ],
+      "settings": {
+        "layout": "grid-3 grid-lap-1",
+        "show_locale_selector": true,
+        "show_country_selector": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

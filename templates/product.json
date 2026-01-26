@@ -1,0 +1,245 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "173982226698e5e04c": {
+      "type": "apps",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "full_width": false,
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_KhA3QT": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price_M3UhQi": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_6dr8qM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Café en grains</p>",
+            "text_size": "text-size--small",
+            "text_style": "text-color--primary",
+            "text_color": "rgba(0,0,0,0)",
+            "text_transform": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "heading": "Quantité",
+            "variants_style": "radio",
+            "variant_labels": false,
+            "color_swatches": true,
+            "style": "outline",
+            "unavailable_variants": "hide"
+          }
+        },
+        "subify_subscriptions_app_app_block_yqtUEB": {
+          "type": "shopify://apps/subi-subscriptions/blocks/app-block/bc0dba25-cd46-4841-bea4-6bdfe9ac815f",
+          "settings": {
+            "product": "{{product}}",
+            "use_app_block_wording": false,
+            "widget_label": "Purchase options",
+            "one_time_purchase_text": "One-Time Purchase",
+            "subscription_text": "Subscribe and save",
+            "delivery_frequency_text": "Delivery frequency",
+            "prepaid_subscription_text": "Subscription with prepaid",
+            "skin1_priceSuffix": "each",
+            "skin1_save": "Save(skin1)",
+            "skin1_prepaid_payment_title": "prepaid",
+            "skin1_normal_payment_title": "pay as you go",
+            "skin2_discountSuffix": "Save",
+            "skin3_fullPrice": "Full price",
+            "skin3_priceSuffix": "each",
+            "skin3_discountSuffix": "Off",
+            "skin4_justOnce": "Just once",
+            "skin4_discountSuffix": "Off",
+            "skin4_priceSuffix": "each",
+            "skin4_fullPrice": "(Full price)",
+            "skin4_sellingPlansTitle": "Renews every:",
+            "from": "from",
+            "max_discount_badge_title": "UP To",
+            "pay": "Pay",
+            "price_save_up_to": "save up to"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_preorder": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "show_price": false,
+            "style": "outline",
+            "color_text_buttons": "rgba(0,0,0,0)"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "product_description_truncated": "full"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "judge_me_reviews_preview_badge_KhA3QT",
+        "price_M3UhQi",
+        "text_6dr8qM",
+        "variant_picker",
+        "subify_subscriptions_app_app_block_yqtUEB",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "gallery_layout": "one-col scroll",
+        "gallery_desktop_width": "one-half",
+        "gallery_mobile_width": 100,
+        "gallery_mobile_margin": false,
+        "gallery_aspect_ratio": "1",
+        "gallery_fit": true,
+        "gallery_padding": 0,
+        "gallery_background": "rgba(0,0,0,0)",
+        "gallery_border": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "show_thumbnails": false,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "default_to_first_variant": true,
+        "sticky_add_to_cart": false,
+        "sticky_atc_style": "wide",
+        "sticky_bar_bgcolor": "#ffffff",
+        "sticky_bar_txtcolor": "#111111"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "product_link": {
+          "type": "product_link",
+          "settings": {
+            "button_label": "Voir le produit"
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "title",
+        "product_link"
+      ],
+      "settings": {
+        "heading": "Vous pourriez aussi aimer ces produits",
+        "subheading": "Recommandés",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "layout_desktop": "four-columns",
+        "layout_mobile": "grid-palm-2",
+        "layout_mobile_less_items": true,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "17483744107f6f29fe": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_abi6NA": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_abi6NA"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "full_width": false,
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "17483756202cd38187": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_KrawQE": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_KrawQE"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "full_width": false,
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "173982226698e5e04c",
+    "main",
+    "product-recommendations",
+    "17483744107f6f29fe",
+    "17483756202cd38187"
+  ]
+}

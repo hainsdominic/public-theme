@@ -1,0 +1,435 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "center": false,
+        "page_cover_metafield": "",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "collection_list_7T8K3A": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_MaW4KB": {
+          "type": "collection",
+          "settings": {
+            "collection": "ambros"
+          }
+        },
+        "collection_JMPJm8": {
+          "type": "collection",
+          "settings": {
+            "collection": "anatolia"
+          }
+        },
+        "collection_gtBpAy": {
+          "type": "collection",
+          "settings": {
+            "collection": "appalaches"
+          }
+        },
+        "collection_cUCAW9": {
+          "type": "collection",
+          "settings": {
+            "collection": "arbre-a-cafe"
+          }
+        },
+        "collection_etXE3H": {
+          "type": "collection",
+          "settings": {
+            "collection": "bernard-street-coffee"
+          }
+        },
+        "collection_Xrcgxr": {
+          "type": "collection",
+          "settings": {
+            "collection": "binocle"
+          }
+        },
+        "collection_FipCpm": {
+          "type": "collection",
+          "settings": {
+            "collection": "brulerie-aux-quatre-vents"
+          }
+        },
+        "collection_nkqx7C": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-balade"
+          }
+        },
+        "collection_fVaDdK": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-charlevoix"
+          }
+        },
+        "collection_8qPJPJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-douceur"
+          }
+        },
+        "collection_wNBe6q": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-mosa"
+          }
+        },
+        "collection_NFFHYJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "cafe-union"
+          }
+        },
+        "collection_EeXWM4": {
+          "type": "collection",
+          "settings": {
+            "collection": "canal"
+          }
+        },
+        "collection_kj8JYG": {
+          "type": "collection",
+          "settings": {
+            "collection": "cascara"
+          }
+        },
+        "collection_VaqdUP": {
+          "type": "collection",
+          "settings": {
+            "collection": "colorfull"
+          }
+        },
+        "collection_3KnUWn": {
+          "type": "collection",
+          "settings": {
+            "collection": "dispatch"
+          }
+        },
+        "collection_URbazz": {
+          "type": "collection",
+          "settings": {
+            "collection": "dual-microtorrefacteur"
+          }
+        },
+        "collection_xPnk6R": {
+          "type": "collection",
+          "settings": {
+            "collection": "duck-duck-coffee"
+          }
+        }
+      },
+      "block_order": [
+        "collection_MaW4KB",
+        "collection_JMPJm8",
+        "collection_gtBpAy",
+        "collection_cUCAW9",
+        "collection_etXE3H",
+        "collection_Xrcgxr",
+        "collection_FipCpm",
+        "collection_nkqx7C",
+        "collection_fVaDdK",
+        "collection_8qPJPJ",
+        "collection_wNBe6q",
+        "collection_NFFHYJ",
+        "collection_EeXWM4",
+        "collection_kj8JYG",
+        "collection_VaqdUP",
+        "collection_3KnUWn",
+        "collection_URbazz",
+        "collection_xPnk6R"
+      ],
+      "settings": {
+        "gym_bigger_pastilles": true,
+        "heading": "Nos torréfacteurs",
+        "subheading": "",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "grid",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "collection_list_pmPDUY": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_VwPwhV": {
+          "type": "collection",
+          "settings": {
+            "collection": "dums"
+          }
+        },
+        "collection_iQ7adc": {
+          "type": "collection",
+          "settings": {
+            "collection": "escape"
+          }
+        },
+        "collection_jXiUFH": {
+          "type": "collection",
+          "settings": {
+            "collection": "geogene"
+          }
+        },
+        "collection_KjC6LD": {
+          "type": "collection",
+          "settings": {
+            "collection": "jungle"
+          }
+        },
+        "collection_a7UMcP": {
+          "type": "collection",
+          "settings": {
+            "collection": "kaapeh"
+          }
+        },
+        "collection_z7JEbY": {
+          "type": "collection",
+          "settings": {
+            "collection": "kittel"
+          }
+        },
+        "collection_pEfKny": {
+          "type": "collection",
+          "settings": {
+            "collection": "kujira"
+          }
+        },
+        "collection_fVf7xB": {
+          "type": "collection",
+          "settings": {
+            "collection": "larue"
+          }
+        },
+        "collection_Ymtyrt": {
+          "type": "collection",
+          "settings": {
+            "collection": "le-club"
+          }
+        },
+        "collection_fnaJkW": {
+          "type": "collection",
+          "settings": {
+            "collection": "manoir-du-cafe"
+          }
+        },
+        "collection_YJDydK": {
+          "type": "collection",
+          "settings": {
+            "collection": "melk"
+          }
+        },
+        "collection_dP9XzE": {
+          "type": "collection",
+          "settings": {
+            "collection": "micro-espresso"
+          }
+        },
+        "collection_HdABjx": {
+          "type": "collection",
+          "settings": {
+            "collection": "monogram-coffee"
+          }
+        },
+        "collection_tbxRgH": {
+          "type": "collection",
+          "settings": {
+            "collection": "myriade"
+          }
+        },
+        "collection_Ag7VwY": {
+          "type": "collection",
+          "settings": {
+            "collection": "naess"
+          }
+        },
+        "collection_eXgXki": {
+          "type": "collection",
+          "settings": {
+            "collection": "nordik"
+          }
+        },
+        "collection_CYVCaa": {
+          "type": "collection",
+          "settings": {
+            "collection": "pista"
+          }
+        },
+        "collection_MbcRwQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "porte-bleue"
+          }
+        }
+      },
+      "block_order": [
+        "collection_VwPwhV",
+        "collection_iQ7adc",
+        "collection_jXiUFH",
+        "collection_KjC6LD",
+        "collection_a7UMcP",
+        "collection_z7JEbY",
+        "collection_pEfKny",
+        "collection_fVf7xB",
+        "collection_Ymtyrt",
+        "collection_fnaJkW",
+        "collection_YJDydK",
+        "collection_dP9XzE",
+        "collection_HdABjx",
+        "collection_tbxRgH",
+        "collection_Ag7VwY",
+        "collection_eXgXki",
+        "collection_CYVCaa",
+        "collection_MbcRwQ"
+      ],
+      "settings": {
+        "gym_bigger_pastilles": true,
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "grid",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "collection_list_FKgATP": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_ggUjBC": {
+          "type": "collection",
+          "settings": {
+            "collection": "saint-henri"
+          }
+        },
+        "collection_7JKKqc": {
+          "type": "collection",
+          "settings": {
+            "collection": "stimolanti22"
+          }
+        },
+        "collection_6erzpk": {
+          "type": "collection",
+          "settings": {
+            "collection": "structure"
+          }
+        },
+        "collection_rtTqLW": {
+          "type": "collection",
+          "settings": {
+            "collection": "tokad"
+          }
+        },
+        "collection_LwwrYi": {
+          "type": "collection",
+          "settings": {
+            "collection": "torque"
+          }
+        },
+        "collection_QJXRmQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "torrefacteurs-sans-frontieres"
+          }
+        },
+        "collection_XERdDe": {
+          "type": "collection",
+          "settings": {
+            "collection": "traffic"
+          }
+        },
+        "collection_ckxCbL": {
+          "type": "collection",
+          "settings": {
+            "collection": "yamabiko"
+          }
+        },
+        "collection_bXQEJD": {
+          "type": "collection",
+          "settings": {
+            "collection": "za-klo"
+          }
+        },
+        "collection_XAz8Cf": {
+          "type": "collection",
+          "settings": {
+            "collection": "zab"
+          }
+        },
+        "collection_6yfLAc": {
+          "type": "collection",
+          "settings": {
+            "collection": "94-celsius"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ggUjBC",
+        "collection_7JKKqc",
+        "collection_6erzpk",
+        "collection_rtTqLW",
+        "collection_LwwrYi",
+        "collection_QJXRmQ",
+        "collection_XERdDe",
+        "collection_ckxCbL",
+        "collection_bXQEJD",
+        "collection_XAz8Cf",
+        "collection_6yfLAc"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "gym_bigger_pastilles": true,
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "grid",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collection_list_7T8K3A",
+    "collection_list_pmPDUY",
+    "collection_list_FKgATP"
+  ]
+}

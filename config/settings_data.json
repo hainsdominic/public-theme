@@ -1,0 +1,333 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "presets": {
+    "Objects": {
+      "headings_font_primary": "sans-serif",
+      "body_font_primary": "sans-serif",
+      "body_primary_size": 16,
+      "body_font_secondary": "sans-serif",
+      "color_background_header": "#ffffff",
+      "color_text_header": "#000000",
+      "color_background_main_secondary": "#f2f2f2",
+      "color_background_footer": "#101010",
+      "color_text_footer": "#f2efec",
+      "container_vertical_space": 140,
+      "grid_gap": 32,
+      "border_width_forms": 1,
+      "border_radius_forms": 6,
+      "border_width_buttons": 1,
+      "border_radius_buttons": 30,
+      "product_card_aspect_ratio": "0.83333",
+      "product_card_aspect_ratio_fit": false,
+      "product_card_thumbnail_gallery": false,
+      "product_card_thumbnail_link": true,
+      "variants_style": "radio",
+      "color_swatches_labels": "color,colour,couleur,cor,colore,culoare,farbe,색,色,カラー,färg,farve,szín,barva",
+      "cart_mini_shadow": false,
+      "product_card_badge_sale_type": "percentage",
+      "product_card_badge_sale_color": "#000000",
+      "product_card_badge_custom_1_color": "#ffffff",
+      "product_card_badge_custom_1_text_color": "#000000",
+      "product_card_badge_custom_2_color": "#ffffff",
+      "product_card_badge_custom_2_text_color": "#000000",
+      "cart_image_ratio": "0.83333",
+      "cart_upsell_heading": "New Product",
+      "cart_recommendations": false,
+      "cart_free_shipping": true,
+      "cart_free_shipping_amount": "200",
+      "show_gotop": true,
+      "color_accent_header": "#f25a38",
+      "color_accent_main": "#f25a38",
+      "color_background_cards": "#FFFFFF",
+      "color_accent_cards": "#f25a38",
+      "color_accent_footer": "#f25a38"
+    },
+    "Electronics": {
+      "headings_font_primary": "dm_sans_n4",
+      "headings_spacing": -1,
+      "body_font_primary": "dm_sans_n4",
+      "body_primary_size": 16,
+      "body_line": 1.3,
+      "body_font_secondary": "dm_sans_n5",
+      "color_background_header": "#1e1e1e",
+      "color_text_header": "#ffffff",
+      "color_background_main": "#ffffff",
+      "color_background_footer": "#1e1e1e",
+      "color_text_footer": "#b9b9b9",
+      "theme_max_width": 1440,
+      "container_vertical_space": 100,
+      "grid_gap": 40,
+      "widgets_border_radius": 10,
+      "border_radius_forms": 10,
+      "border_width_buttons": 1,
+      "border_radius_buttons": 30,
+      "product_card_aspect_ratio": "0.83333",
+      "product_card_aspect_ratio_fit": false,
+      "proudct_card_aspect_ratio_padding": 0,
+      "product_card_border_radius": 20,
+      "product_card_thumbnail_gallery": false,
+      "variants_style": "select",
+      "color_swatches_labels": "color,colour,couleur,cor,colore,culoare,farbe,색,色,カラー,färg,farve,szín,barva",
+      "cart_mini_enabled": false,
+      "cart_mini_shadow": false
+    },
+    "Beauty": {
+      "headings_font_primary": "dm_sans_n5",
+      "body_font_primary": "dm_sans_n4",
+      "body_font_secondary": "dm_sans_n5",
+      "color_background_header": "#ffffff",
+      "color_background_main_secondary": "#f2efec",
+      "color_background_footer": "#1b1a1a",
+      "color_text_footer": "#f1eeec",
+      "container_vertical_space": 140,
+      "grid_gap": 32,
+      "border_width_forms": 1,
+      "border_radius_forms": 6,
+      "border_radius_buttons": 6,
+      "product_card_aspect_ratio": "0.666667",
+      "product_card_thumbnail_link": true,
+      "variants_style": "select",
+      "color_swatches_labels": "color,colour,couleur,cor,colore,culoare,farbe,색,色,カラー,färg,farve,szín,barva",
+      "cart_mini_shadow": false,
+      "cart_image_ratio": "0.83333",
+      "cart_free_shipping": true,
+      "social_facebook": "#",
+      "social_instagram": "#",
+      "social_pinterest": "#",
+      "color_accent_header": "#f25a38",
+      "color_accent_main": "#f25a38",
+      "color_background_cards": "#FFFFFF",
+      "color_accent_cards": "#f25a38",
+      "color_accent_footer": "#f25a38"
+    },
+    "Books": {
+      "headings_font_primary": "dm_sans_n5",
+      "headings_primary_size": 70,
+      "headings_line": 1.1,
+      "headings_spacing": -3,
+      "body_font_primary": "pt_mono_n4",
+      "body_primary_size": 15,
+      "color_background_header": "#FFFFFF",
+      "color_background_main_secondary": "#EEF1F2",
+      "color_background_footer": "#000000",
+      "color_text_footer": "#EEF1F2",
+      "theme_max_width": 1920,
+      "container_vertical_space": 150,
+      "widgets_border_radius": 20,
+      "border_radius_buttons": 30,
+      "product_card_aspect_ratio": "0.83333",
+      "proudct_card_aspect_ratio_padding": 0,
+      "product_card_border_radius": 20,
+      "product_card_thumbnail_gallery": false,
+      "product_card_thumbnail_link": true
+    },
+    "Restaurant": {
+      "headings_font_primary": "bauer_bodoni_n4",
+      "headings_primary_size": 76,
+      "headings_spacing": 0,
+      "body_font_secondary": "bauer_bodoni_n4",
+      "body_secondary_size": 20,
+      "color_background_header": "#161514",
+      "color_text_header": "#d2c692",
+      "color_background_main": "#efede6",
+      "color_text_main": "#161514",
+      "color_background_footer": "#161514",
+      "color_text_footer": "#d2c692",
+      "container_vertical_space": 150,
+      "widgets_border_radius": 14,
+      "border_radius_buttons": 30,
+      "product_card_aspect_ratio": "1",
+      "product_card_aspect_ratio_fit": false,
+      "proudct_card_aspect_ratio_padding": 0,
+      "product_card_background": "rgba(0,0,0,0)",
+      "product_card_border": "#efede6",
+      "product_card_border_radius": 20,
+      "product_card_thumbnail_gallery": true,
+      "product_card_thumbnail_link": true,
+      "cart_mini_enabled": false,
+      "show_badges": true,
+      "show_breadcrumb": true
+    }
+  },
+  "current": {
+    "headings_font_primary": "garamond_n4",
+    "headings_primary_size": 68,
+    "headings_line": 1,
+    "headings_spacing": 0,
+    "body_font_primary": "sans-serif",
+    "body_primary_size": 20,
+    "body_line": 1.4,
+    "body_font_secondary": "sans-serif",
+    "body_secondary_size": 24,
+    "color_background_header": "#edfeff",
+    "color_text_header": "#000000",
+    "color_background_main": "#fffff9",
+    "color_background_main_secondary": "#f2f2f2",
+    "color_text_main": "#000000",
+    "color_background_footer": "#4b2815",
+    "color_text_footer": "#ffffff",
+    "theme_max_width": 1360,
+    "container_vertical_space": 50,
+    "grid_gap": 32,
+    "widgets_border_radius": 10,
+    "border_width_forms": 1,
+    "border_radius_forms": 6,
+    "border_width_buttons": 1,
+    "border_radius_buttons": 30,
+    "product_card_aspect_ratio": "1",
+    "product_card_aspect_ratio_fit": true,
+    "proudct_card_aspect_ratio_padding": 10,
+    "product_card_background": "rgba(0,0,0,0)",
+    "product_card_border": "rgba(0,0,0,0)",
+    "product_card_border_radius": 0,
+    "product_card_thumbnail_gallery": true,
+    "product_card_thumbnail_link": true,
+    "variants_style": "radio",
+    "color_swatches_labels": "color,colour,couleur,cor,colore,culoare,farbe,색,色,カラー,färg,farve,szín,barva",
+    "cart_mini_enabled": true,
+    "cart_mini_shadow": false,
+    "show_badges": true,
+    "product_card_badge_sale_type": "percentage",
+    "product_card_badge_sale_color": "#000000",
+    "product_card_badge_custom_1_color": "#ffffff",
+    "product_card_badge_custom_1_text_color": "#000000",
+    "product_card_badge_custom_2_color": "#ffffff",
+    "product_card_badge_custom_2_text_color": "#000000",
+    "favicon": "shopify://shop_images/Group_100_c3224df8-895e-462a-84ad-997e370e18eb.png",
+    "cart_action": "no-overlay",
+    "cart_notes_enable": false,
+    "cart_image_ratio": "0.83333",
+    "cart_upsell_heading": "New Product",
+    "cart_recommendations": false,
+    "cart_free_shipping": true,
+    "cart_free_shipping_amount": "35",
+    "show_breadcrumb": false,
+    "show_gotop": true,
+    "social_instagram": "https://www.instagram.com/cafe__public?igsh=MTc3YXVmZzk5OTBscQ%3D%3D&utm_source=qr",
+    "social_tiktok": "https://www.tiktok.com/@cafe_public",
+    "color_accent_header": "#f25a38",
+    "color_accent_main": "#f25a38",
+    "color_background_cards": "#FFFFFF",
+    "color_accent_cards": "#f25a38",
+    "color_accent_footer": "#f25a38",
+    "sections": {
+      "popups": {
+        "type": "popups",
+        "blocks": {
+          "popups-0": {
+            "type": "cookies",
+            "settings": {
+              "popup_bgcolor": "#111111",
+              "popup_txtcolor": "#ffffff",
+              "popup_box_shadow": false
+            }
+          },
+          "popups-1": {
+            "type": "newsletter",
+            "settings": {
+              "enable": false,
+              "visibility": "all",
+              "title": "Newsletter",
+              "content": "<p>Subscribe and receive exclusive information and offers!</p>",
+              "show_after": 5,
+              "show_repeat": "week",
+              "popup_bgcolor": "#111111",
+              "popup_txtcolor": "#ffffff",
+              "popup_box_shadow": false
+            }
+          }
+        },
+        "block_order": [
+          "popups-0",
+          "popups-1"
+        ],
+        "settings": {
+          "popup_border_radius": 10,
+          "alignment": "right"
+        }
+      },
+      "popup-age-verification": {
+        "type": "popup-age-verification",
+        "settings": {
+          "enable": false,
+          "heading": "Age verification",
+          "content": "<p>By clicking enter, I certify that I am over the age of 18</p>",
+          "button_label": "Enter",
+          "popup_bgcolor": "#111111",
+          "popup_txtcolor": "#ffffff"
+        }
+      },
+      "exit-intent-popup": {
+        "type": "exit-intent-popup",
+        "settings": {
+          "enable": false,
+          "title": "Before you leave",
+          "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
+          "cta_label": "",
+          "cta_url": "",
+          "cta_target": false,
+          "show_repeat": "week"
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo_src": "shopify://shop_images/Group.png",
+          "logo_height": 80
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "show_social": false
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "15119538188275799212": {
+        "type": "shopify://apps/fontify/blocks/app-embed/334490e2-2153-4a2e-a452-e90bdeffa3cc",
+        "disabled": false,
+        "settings": {}
+      },
+      "15588394620387169604": {
+        "type": "shopify://apps/subify-subscriptions-app/blocks/app-embed-block/bc0dba25-cd46-4841-bea4-6bdfe9ac815f",
+        "disabled": false,
+        "settings": {}
+      },
+      "8170924994765517213": {
+        "type": "shopify://apps/tepo-product-options/blocks/app-embed/906ef57c-14e4-45d8-8b53-3ba7349d56a6",
+        "disabled": true,
+        "settings": {}
+      },
+      "11212335281082087862": {
+        "type": "shopify://apps/sk-advanced-form-builder/blocks/app/f3e35b58-5874-4ef2-8e03-c92cda6e49eb",
+        "disabled": false,
+        "settings": {}
+      },
+      "3043103654335303468": {
+        "type": "shopify://apps/shinetrust-product-badges/blocks/shine-trust-embed/02c12337-3f93-45f7-a60d-aabc0cb2c5dd",
+        "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "9982044979145662863": {
+        "type": "shopify://apps/quizshop/blocks/htc-quiz-embed/1dead2dc-cb7e-4e45-bead-dbbaf8f248a9",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  }
+}

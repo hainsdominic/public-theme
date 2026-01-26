@@ -1,0 +1,79 @@
+{% comment %}
+  Renders product variant options
+
+  Accepts:
+  - type: {String} type of variant picker. Possible values: 'select', 'radio', 'swatch'.
+  - product: {Object} product object.
+  - option: {Object} option object.
+  - current_variant: {Object} current variant object.]
+  - default_to_first_variant: {Boolean} default to first available variant if true.
+  - handle_unavailable_variants: {String} how are unavailable variants rendered. Possible values: 'show', 'disable'.
+  - id: {String} unique id (can be section.id).
+  Usage:
+  {% render 'product-variant-options', type: 'select', option: option, product: product, current_variant: current_variant, default_to_first_variant: true, handle_unavailable_variants: 'show' %}
+{% endcomment %}
+
+{%- if type == 'select' -%}
+  {%- unless default_to_first_variant -%}
+    <option class="product-variant-value" default selected disabled>{{ 'products.grid.select_variant' | t: variant: option.name }}</option>
+  {%- endunless -%}
+{%- endif -%}
+
+{%- for value in option.values -%}
+
+  {%- capture option_id -%}{{ product.handle }}-option-{{ option.name | escape | downcase | strip }}-{{ forloop.index }}-{{ id }}{%- endcapture -%}
+  {%- capture option_name -%}product-{{ option.name | escape | downcase | strip }}-{{ id }}{%- endcapture -%}
+
+  {%- if type == 'select' -%}
+
+    <option class="product-variant-value" value="{{ value | escape }}" {% if default_to_first_variant and option.selected_value == value %}selected{% endif %}>
+      {{ value | escape }}
+    </option>
+
+  {%- elsif type == 'swatch' -%}
+                        
+    <div class="product-variant__item product-variant__item--radio product-variant__item--color">
+      <input type="radio" name="{{ option_name }}" id="{{ option_id }}" value="{{ value | escape }}" {% if default_to_first_variant and option.selected_value == value %}checked{% endif %} class="product-variant__input product-variant-value">
+      <label for="{{ option_id }}" class="product-variant__label">
+        {%- liquid 
+          if value.swatch.image
+            assign color_swatch_image = value.swatch.image
+          elsif value.swatch.color
+            assign color_swatch_background = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+          else
+            assign color_swatch_name = value | handle | append: '.png'
+            assign color_swatch_image = images[color_swatch_name]
+            assign color_swatch_background = value | downcase | escape | replace: ' ', ''
+          endif
+        -%}
+        {%- if color_swatch_image != blank -%}
+          <img class="product-variant__item-swatch product-variant__item-swatch--color"
+            src="{{ color_swatch_image | image_url: width: 30, height: 30, crop: 'center' }}"
+            srcset="
+              {{ color_swatch_image | image_url: width: 30, height: 30, crop: 'center' }} 30w,
+              {{ color_swatch_image | image_url: width: 60, height: 60, crop: 'center' }} 60w,
+              {{ color_swatch_image | image_url: width: 90, height: 90, crop: 'center' }} 90w
+            "
+            sizes="30px" width="30" height="30"
+            loading="lazy"
+            alt="{{ color_swatch_image.alt | escape }}"
+          />
+        {%- else -%}
+          <span class="product-variant__item-swatch product-variant__item-swatch--image" style="background-color:{{ color_swatch_background }}"></span>
+        {%- endif -%}
+        <span class="visually-hidden">{{ value | escape }}</span>
+      </label>
+    </div>
+
+  {%- else -%}
+
+    <div class="product-variant__item product-variant__item--radio">
+      <input type="radio" name="{{ option_name }}" id="{{ option_id }}" value="{{ value | escape }}" {% if default_to_first_variant and option.selected_value == value %}checked{% endif %} class="product-variant__input product-variant-value">
+      <label for="{{ option_id }}" class="product-variant__label text-size--small">
+        {{ value | escape }}
+      </label>
+    </div>
+
+  {%- endif -%}
+
+{%- endfor -%}

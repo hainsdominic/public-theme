@@ -1,0 +1,316 @@
+slider-vertical {
+    padding: 0 0!important;
+}
+
+.css-slider-viewport {
+    width: 80%!important;
+    margin: auto!important;
+}
+
+.css-slider:not(.css-slider--overlay-navigation) .css-slider-navigation-container {
+    margin-top: 0!important;
+}
+
+.announcement-bar__content .announcement {
+    font-size: calc(18px / 16* var(--base-body-primary-size) + 0px)!important;
+}
+
+.announcement-bar {
+    grid-template-columns: 10% 80%!important;;
+}
+
+.add-to-cart {
+    background-color: var(--color-background-footer)!important;
+    color: var(--color-background-main)!important;
+    border-color: var(--color-background-main)!important;
+}
+
+.card__image img {
+    object-fit: contain!important;
+}
+
+.additional-content a {
+    display:flex;
+}
+
+.additional-content .card__image {
+    height:50px;
+    width:50px;
+}
+
+.additional-content .card__image img{
+    padding-left: 15px;
+    padding-right: 12px;
+}
+
+.additional-sideFacets .card__image img{
+    padding-left:0;
+    padding-right:0;
+}
+
+.additional-sideFacets .js-collection-item {
+    margin-bottom: 8px; 
+}
+
+.additional-sideFacets .gutter-top--regular {
+    margin-left:10px;
+}
+
+.additional-content .gutter-top--regular{
+    width:calc(100% - 50px);
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-left: 10px;
+}
+
+.gym_bigger_pastilles .card__image{
+    height:100px!important;
+}
+
+.product-gallery-item { 
+    padding-top: 80%!important;
+}
+
+/* p, 
+p strong, 
+p span,
+ul li,
+ul li strong,
+.css-slider-container .text-size--small {
+    font-family:Arial!important;
+} */
+
+.shop-product__description p,
+.shop-product__description p span,
+.shop-product__description p strong {
+    font-size:18px!important;
+}
+
+.gymnase_special_infotabs .css-slide{
+    border:none;
+}
+
+#go-top {
+    display:none;
+}
+
+.collection-heading__text {
+    display:none;
+}
+
+.product-recommendations .section-heading__subheading {
+    display:none;
+}
+
+.additional-sideFacets,
+.additional-content {
+    margin-top:2.5rem;
+}
+
+.additional-content.additional_mobile{
+    display:none;
+}
+
+.additional-sideFacets .text-weight--medium{
+    margin-bottom: .75rem;
+    line-height:2;
+}
+
+.gym_two_lines .remove-line-height-space--small,
+.product-recommendations .product-item .product-item__title,
+.product-item__title .remove-line-height-space--small
+{
+    height:56px!important;
+}
+
+@media screen and (max-width: 767px) {
+
+    slider-vertical {
+        padding: 2vh 0!important;
+    }
+
+    .announcement-bar {
+        grid-template-columns: 100%!important;
+    }
+    .announcement-bar__content .announcement {
+        font-size: calc(15px / 16* var(--base-body-primary-size) + 0px)!important;
+    }
+
+    .rich-text__text.gutter--xlarge {
+        padding: 15px!important;
+    }
+
+    /* .info-tabs_togglers {
+        flex-direction: column!important;
+    } */
+
+    .info-tabs_togglers .info-tabs__tab {
+        width:100%!important;
+    }
+
+    .info-tabs_togglers-style--list .info-tabs__tab:before {
+        display:none!important;
+    }
+
+    .info-tabs_togglers ul {
+        margin-inline-start: 0!important;
+    }
+    .section-heading--one-row .section-heading__title {
+        max-width: 90%!important;
+    }
+
+    .before-after--mobile-medium {
+        height: 35vh!important;
+    }
+
+    .gymnase_special_infotabs .grid--slider {
+        grid-auto-flow: unset!important;
+        grid-auto-columns: unset!important;
+        grid-template-columns: unset!important;
+    }
+
+    .gymnase_special_infotabs .grid--slider .card__image {
+        padding-top: 0!important;
+        height: 100%!important;
+        width: 50%;
+    }
+
+    .gymnase_special_infotabs .grid--slider .text-align--center {
+        width:100%;
+    }
+
+    .gymnase_special_infotabs:not(.gymnase_special_2_cols) .text-font--primary {
+        display: none!important;
+    }
+
+    .gymnase_special_infotabs .section-heading__text {
+        flex-direction: column;
+    }
+
+    .gymnase_special_infotabs .section-heading__subheading {
+        padding-inline-start:0;
+        text-align: center;
+        padding-top:15px;
+        border-left:none;
+    }
+
+    .gymnase_special_infotabs.gymnase_special_no_img .card__image{
+        display: none !important;
+    }
+
+    .gymnase_special_infotabs.gymnase_special_no_img .gutter--regular{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .gymnase_special_infotabs.gymnase_special_no_img .grid{
+        grid-gap: 0;
+    }
+
+    .gymnase_special_infotabs .section-heading__title {
+        padding-right:0;
+    }
+
+    .gymnase_special_infotabs.gymnase_special_2_cols .grid--slider{
+        grid-auto-flow: unset!important;
+        grid-auto-columns: unset!important;
+        grid-template-columns: 50% 50%!important;
+    }
+    .gymnase_special_infotabs .grid--slider .card{
+        display: flex!important;
+        flex-direction: row!important;
+        align-items: center!important;
+        height: 15vh!important;
+        border-width: 5px;
+    }
+    .gymnase_special_infotabs.gymnase_special_2_cols .grid--slider .card{
+        width: 40vw!important;
+        height: 20vh!important;
+        border-radius: 50px!important;
+    }
+
+    .gymnase_special_infotabs .css-slider-viewport {
+        width: 100%!important;
+    }
+
+    .gymnase_special_infotabs.gymnase_special_2_cols .card__image {
+        display:none!important;
+    }
+
+    .gymnase_special_no_img .card__image {
+        display:none!important;
+    }
+
+    .gymnase_special_infotabs .section-heading__text {
+        justify-content: center!important;
+    }
+
+    .gymnase_special_infotabs.gymnase_special_2_cols .text-size--small,
+    .css-slider-container .text-size--small {
+        font-size: calc(11px / 16* var(--base-body-primary-size) + 0px);
+    }
+
+    .gymnase_special_no_img .text-align--center {
+        text-align: left;
+        padding-left:0;
+        padding-bottom: 0;
+        padding-top:0;
+    }
+
+    .gymnase_special_infotabs .grid{
+        grid-gap: var(--col-gap);
+    }
+
+    .gymnase_special_infotabs.gymnase_special_2_cols .text-align--center {
+        /* text-align: left!important; */
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+    }
+
+    .gymnase_special_infotabs .css-slider-navigation-container {
+        display:none!important;
+    }
+
+    .additional-content
+    {
+        display: grid;
+        width: 100vw;
+        grid-template-columns: 30% 30% 30%;
+        margin-bottom:2.5rem;
+        margin-top:0;
+    }
+
+    .additional-sideFacets {
+        display: flex;
+        flex-direction: column;
+        width:unset;
+        margin-top:2.5rem;
+    }
+
+    .additional_desktop{
+        display:none;
+    }
+
+    .additional-content.additional_mobile {
+        display:grid;
+    }
+
+    .additional-content .gutter-top--regular {
+        padding-left:0;
+    }
+
+    .lap--grid--slider {
+        grid-template-rows: 300px;
+    }
+    .mount-product-page .grid {
+        grid-gap: 0;
+    }
+    .gymnase_special_infotabs .css-slide{
+        border:5px solid;
+    }
+
+    .gymnase_special_infotabs .gutter--regular {
+        padding:0;
+    }
+}
