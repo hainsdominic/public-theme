@@ -65,6 +65,16 @@
   overflow: hidden;
 }
 
+.product-item {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
+}
 .product-item.filter-hidden {
+  display: none;
+}
+.has-custom-filters .product-item {
+  opacity: 0;
+}
+.has-custom-filters .product-item.filter-hidden {
   display: none;
 }

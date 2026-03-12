@@ -1,13 +1,11 @@
 {{ 'section-main-collection-product-grid.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'collection-filters.js' | asset_url }}" defer></script>
 
-{%- liquid
-  assign has_custom_filters = false
-  assign current_url = request.url | default: ''
-  if current_url contains 'flavor=' or current_url contains 'machine='
-    assign has_custom_filters = true
-  endif
--%}
+<script>
+  if (window.location.search.includes('flavor=') || window.location.search.includes('machine=')) {
+    document.documentElement.classList.add('has-custom-filters');
+  }
+</script>
 
 {% if section.settings.filters_position == "top" %}
   <div class="container--large" data-js-inert>
@@ -98,9 +96,10 @@
 
               </div>
             {%- endunless -%}
-            <div id="main-collection-product-grid" data-id="{{ section.id }}" class="collection grid grid--layout 
+            <div id="main-collection-product-grid" data-id="{{ section.id }}" class="collection grid grid--layout
               {{ grid_class_desktop }} {{ grid_class_mobile }}
-              {% if section.settings.gym_two_lines%}gym_two_lines{% endif %}">
+              {% if section.settings.gym_two_lines%}gym_two_lines{% endif %}
+">
 
       {%- else -%}
 
@@ -131,8 +130,8 @@
         -%}
 
         <div id="CollectionProductGrid">
-          <div id="main-collection-product-grid" data-id="{{ section.id }}" 
-            class="collection grid grid--layout {{ grid_class_desktop }} {{ grid_class_mobile }} 
+          <div id="main-collection-product-grid" data-id="{{ section.id }}"
+            class="collection grid grid--layout {{ grid_class_desktop }} {{ grid_class_mobile }}
             {% if section.settings.gym_two_lines%}gym_two_lines{% endif %}">
 
       {%- endif -%}

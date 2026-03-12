@@ -9,6 +9,8 @@
     bindFilterButtons();
     applyFilters();
 
+    document.documentElement.classList.remove('has-custom-filters');
+
     const hasFilters = state.flavor.length > 0 || state.machine.length > 0;
     const pagination = document.querySelector('.pagination');
     if (pagination && hasFilters) {
