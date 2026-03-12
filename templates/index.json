@@ -138,47 +138,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "featured_collection_Hiczqa": {
-      "type": "featured-collection",
-      "blocks": {
-        "price_UtbJ6z": {
-          "type": "price",
-          "settings": {}
-        },
-        "title_HJzDPL": {
-          "type": "title",
-          "settings": {}
-        },
-        "quick_buy_bqqTwn": {
-          "type": "quick_buy",
-          "settings": {
-            "show_only_available": false,
-            "variant_default": true,
-            "show_price": false,
-            "unavailable_variants": "hide"
-          }
-        }
-      },
-      "block_order": ["price_UtbJ6z", "title_HJzDPL", "quick_buy_bqqTwn"],
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "heading": "Collection Saint-Valentin",
-        "subheading": "",
-        "section_heading_size": "text-size--regular",
-        "section_heading_layout": "section-heading--left section-heading--one-row",
-        "show_view_all": true,
-        "layout": "grid-4 grid-portable-3 grid-lap-2",
-        "layout_mobile": "grid-palm-2",
-        "products_number": 8,
-        "collection": "collection-saint-valentin",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_background_gradient": "",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "gutter_decrease": false,
-        "remove_bottom_margin": false,
-        "seo_h_tag": "h2"
-      }
-    },
     "featured_collection_ifGty4": {
       "type": "featured-collection",
       "blocks": {
@@ -766,7 +725,6 @@
   "order": [
     "slider_BxHVLb",
     "collection_list_xndrFP",
-    "featured_collection_Hiczqa",
     "featured_collection_ifGty4",
     "featured_collection_hDYrpw",
     "featured_collection_iegEyz",
