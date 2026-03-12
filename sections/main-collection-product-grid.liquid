@@ -1,4 +1,5 @@
 {{ 'section-main-collection-product-grid.css' | asset_url | stylesheet_tag }}
+{{ 'component-pagination.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'collection-filters.js' | asset_url }}" defer></script>
 
 {% if section.settings.filters_position == "top" %}
@@ -90,7 +91,7 @@
 
               </div>
             {%- endunless -%}
-            <div id="main-collection-product-grid" data-id="{{ section.id }}" data-collection-handle="{{ collection.handle }}" class="collection grid grid--layout
+            <div id="main-collection-product-grid" data-id="{{ section.id }}" data-collection-handle="{{ collection.handle }}" data-products-per-page="{{ section.settings.products_number | default: 24 }}" class="collection grid grid--layout
               {{ grid_class_desktop }} {{ grid_class_mobile }}
               {% if section.settings.gym_two_lines%}gym_two_lines{% endif %}
 ">
@@ -124,7 +125,7 @@
         -%}
 
         <div id="CollectionProductGrid">
-          <div id="main-collection-product-grid" data-id="{{ section.id }}" data-collection-handle="{{ collection.handle }}"
+          <div id="main-collection-product-grid" data-id="{{ section.id }}" data-collection-handle="{{ collection.handle }}" data-products-per-page="{{ section.settings.products_number | default: 24 }}"
             class="collection grid grid--layout {{ grid_class_desktop }} {{ grid_class_mobile }}
             {% if section.settings.gym_two_lines%}gym_two_lines{% endif %}">
 
@@ -158,17 +159,21 @@
               
             {%- endfor -%}
 
-        {%- if paginate.pages > 1 -%}
-          <div id="collection-pagination" class="{{ pagination_offset_class }} {{ pagination_offset_mobile_class | append: ' offset-mobile-on'}}">
-            {%- render 'pagination', paginate: paginate %}
-          </div>
-        {%- endif -%}
-
       {%- if section.settings.filters_position == "sidebar" -%}
             </div>
-          </div>    
+          <div id="collection-pagination" class="{{ pagination_offset_class }} {{ pagination_offset_mobile_class | append: ' offset-mobile-on'}}"{% unless paginate.pages > 1 %} style="display:none"{% endunless %}>
+            {%- if paginate.pages > 1 -%}
+              {%- render 'pagination', paginate: paginate %}
+            {%- endif -%}
+          </div>
+          </div>
         </div>
       {%- else -%}
+          </div>
+          <div id="collection-pagination" class="{{ pagination_offset_class }} {{ pagination_offset_mobile_class | append: ' offset-mobile-on'}}"{% unless paginate.pages > 1 %} style="display:none"{% endunless %}>
+            {%- if paginate.pages > 1 -%}
+              {%- render 'pagination', paginate: paginate %}
+            {%- endif -%}
           </div>
         </div>
       {%- endif -%}

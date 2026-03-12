@@ -69,7 +69,8 @@
   content-visibility: auto;
   contain-intrinsic-size: auto 300px;
 }
-.product-item.filter-hidden {
+.product-item.filter-hidden,
+.product-item.page-hidden {
   display: none;
 }
 #main-collection-product-grid.collection-loading {
