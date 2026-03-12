@@ -1,12 +1,6 @@
 {{ 'section-main-collection-product-grid.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'collection-filters.js' | asset_url }}" defer></script>
 
-<script>
-  if (window.location.search.includes('flavor=') || window.location.search.includes('machine=')) {
-    document.documentElement.classList.add('has-custom-filters');
-  }
-</script>
-
 {% if section.settings.filters_position == "top" %}
   <div class="container--large" data-js-inert>
     {%- liquid
@@ -20,7 +14,7 @@
 <div data-js-inert>
 
   {%- liquid
-    assign products_per_page = 999
+    assign products_per_page = section.settings.products_number
   -%}
   {%- paginate collection.products by products_per_page -%}
     
@@ -96,7 +90,7 @@
 
               </div>
             {%- endunless -%}
-            <div id="main-collection-product-grid" data-id="{{ section.id }}" class="collection grid grid--layout
+            <div id="main-collection-product-grid" data-id="{{ section.id }}" data-collection-handle="{{ collection.handle }}" class="collection grid grid--layout
               {{ grid_class_desktop }} {{ grid_class_mobile }}
               {% if section.settings.gym_two_lines%}gym_two_lines{% endif %}
 ">
@@ -130,7 +124,7 @@
         -%}
 
         <div id="CollectionProductGrid">
-          <div id="main-collection-product-grid" data-id="{{ section.id }}"
+          <div id="main-collection-product-grid" data-id="{{ section.id }}" data-collection-handle="{{ collection.handle }}"
             class="collection grid grid--layout {{ grid_class_desktop }} {{ grid_class_mobile }}
             {% if section.settings.gym_two_lines%}gym_two_lines{% endif %}">
 
@@ -165,7 +159,7 @@
             {%- endfor -%}
 
         {%- if paginate.pages > 1 -%}
-          <div class="{{ pagination_offset_class }} {{ pagination_offset_mobile_class | append: ' offset-mobile-on'}}">
+          <div id="collection-pagination" class="{{ pagination_offset_class }} {{ pagination_offset_mobile_class | append: ' offset-mobile-on'}}">
             {%- render 'pagination', paginate: paginate %}
           </div>
         {%- endif -%}

@@ -13,7 +13,7 @@
 
   {%- capture element_attributes -%}
     class="product-item__image
-    {% if section_blocks.size == 0 %} product-item__image--no-text {% endif %}"
+    {% if section_blocks.size == 0 and default_blocks != true %} product-item__image--no-text {% endif %}"
     {% if blank_product %} style="padding-top:100%" {% else %} style="padding-top:{{ 100 | divided_by: aspect_ratio }}%" {% endif %}
     data-js-product-item-image
   {%- endcapture -%}
@@ -100,20 +100,51 @@
 
   <div class="card__text product-item__text gutter-top--regular gutter-bottom--regular spacing--xlarge remove-empty-space text-align--left">
 
+    {%- if section_blocks.size == 0 and default_blocks -%}
+
+      <div class="product-item__price text-size--small equalize-white-space">
+        <div class="remove-line-height-space" data-js-product-item-price>
+          {% unless blank_product %}
+            {%- render 'product-price', target: product, variant: product_variant, product_price_varies: product.price_varies -%}
+          {%- else -%}
+            {{ 9999 | money }}
+          {%- endunless -%}
+        </div>
+      </div>
+
+      <a class="product-item__title" href="{{ product_url }}" title="{{ product.title | escape }}">
+        <div class="remove-line-height-space--small">
+          <span class="text-animation--underline-thin text-size--large text-weight--bold">
+            {{ product.title | escape }}
+          </span>
+        </div>
+      </a>
+
+      {%- unless product.available == false -%}
+        {%- assign block_id = 'default-qb-' | append: section_id | append: '-' | append: index -%}
+        <div class="product-item__quick-buy {% if product.has_only_default_variant %} product-item__quick-buy--no-border {% endif %}" data-id="{{ block_id }}">
+          {%- unless product == blank -%}
+            {%- render 'quick-buy', product: product, variants_style: settings.variants_style, show_color_swatches: settings.color_swatches, change_variant_images: settings.variant_images, default_to_first_variant: true, add_to_cart_price: false, show_variant_quantities: "no", unavailable_variants: "hide", image_sizes: sizes, image_aspect_ratio: aspect_ratio, id: block_id -%}
+          {%- endunless -%}
+        </div>
+      {%- endunless -%}
+
+    {%- else -%}
+
     {%- for block in section_blocks -%}
       {%- case block.type %}
 
         {%- when 'title' -%}
-          <a class="product-item__title" 
-            href="{{ product_url }}" title="{{ product.title | escape }}" 
+          <a class="product-item__title"
+            href="{{ product_url }}" title="{{ product.title | escape }}"
             {{ block.shopify_attributes }}
           >
             <div class="remove-line-height-space--small">
               <span class="text-animation--underline-thin text-size--large text-weight--bold">
-                {%- liquid 
-                  unless blank_product 
+                {%- liquid
+                  unless blank_product
                     echo product.title | escape
-                  else 
+                  else
                     echo 'general.onboarding.product_title' | t
                   endunless
                 -%}
@@ -122,8 +153,8 @@
           </a>
 
         {%- when 'price' -%}
-          <div 
-            class="product-item__price text-size--small equalize-white-space" 
+          <div
+            class="product-item__price text-size--small equalize-white-space"
             {{ block.shopify_attributes }}
           >
             <div class="remove-line-height-space" data-js-product-item-price>
@@ -250,6 +281,8 @@
 
       {%- endcase %}
     {%- endfor -%}
+
+    {%- endif -%}
 
     {%- if add_quick_buy -%}
       {%- assign block_id = 'add-quick-buy-' | append: section_id | append: '-' | append: index -%}

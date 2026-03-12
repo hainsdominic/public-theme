@@ -1,0 +1,14 @@
+{%- paginate collection.products by 999 -%}
+  <div id="helper-all-products">
+    {%- for product in collection.products -%}
+      {%- render 'product-item', product: product, section_blocks: section.blocks, default_blocks: true, index: forloop.index, section_id: section.id, product_collection: collection, show_badges: settings.show_badges -%}
+    {%- endfor -%}
+  </div>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Helper products",
+  "settings": []
+}
+{% endschema %}
