@@ -4,6 +4,7 @@
 # Prevents overwriting client changes made in the Shopify editor
 
 STORE="cafepublic.myshopify.com"
+THEME="183131996466"
 
 echo "🔄 Pulling latest theme from Shopify ($STORE)..."
 
@@ -12,7 +13,7 @@ if ! command -v shopify &>/dev/null; then
   exit 0
 fi
 
-if ! shopify theme pull --store "$STORE" --path "$(git rev-parse --show-toplevel)" 2>&1; then
+if ! shopify theme pull --store "$STORE" --theme "$THEME" --path "$(git rev-parse --show-toplevel)" 2>&1; then
   echo "⚠️  Could not pull from Shopify. Continuing push — verify manually if client may have made editor changes."
   exit 0
 fi
