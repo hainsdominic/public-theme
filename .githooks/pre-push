@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Pre-push hook: pull latest Shopify theme state before pushing
+# Prevents overwriting client changes made in the Shopify editor
+
+STORE="cafepublic.ca"
+
+echo "🔄 Pulling latest theme from Shopify ($STORE)..."
+
+if ! command -v shopify &>/dev/null; then
+  echo "⚠️  Shopify CLI not found, skipping pull. Be careful with template JSON files."
+  exit 0
+fi
+
+if ! shopify theme pull --store "$STORE" --path "$(git rev-parse --show-toplevel)" 2>&1; then
+  echo "⚠️  Could not pull from Shopify. Continuing push — verify manually if client may have made editor changes."
+  exit 0
+fi
+
+if [[ -n $(git status --porcelain) ]]; then
+  echo ""
+  echo "❌ Shopify has changes that aren't in git yet!"
+  echo ""
+  git status --short
+  echo ""
+  echo "Commit these first, then push again."
+  exit 1
+fi
+
+echo "✅ Shopify and git are in sync. Pushing..."
+exit 0
