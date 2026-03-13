@@ -3,7 +3,7 @@
 # Pre-push hook: pull latest Shopify theme state before pushing
 # Prevents overwriting client changes made in the Shopify editor
 
-STORE="cafepublic.ca"
+STORE="cafepublic.myshopify.com"
 
 echo "🔄 Pulling latest theme from Shopify ($STORE)..."
 

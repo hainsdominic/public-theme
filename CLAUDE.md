@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Shopify theme for **Café Public** (cafepublic.ca) — a Quebec-based specialty coffee marketplace. Built on the **Combine** theme (v2.4.3) by KrownThemes. French-language store.
+Shopify theme for **Café Public** (cafepublic.myshopify.com) — a Quebec-based specialty coffee marketplace. Built on the **Combine** theme (v2.4.3) by KrownThemes. French-language store.
 
 ## Development Setup
 
@@ -15,13 +15,13 @@ No build tools — assets are pre-built and committed directly. Development uses
 git config core.hooksPath .githooks
 
 # Serve theme locally against the live store
-shopify theme dev --store cafepublic.ca
+shopify theme dev --store cafepublic.myshopify.com
 
 # Push theme to Shopify (production syncs from GitHub main branch)
 git push origin main
 
 # Pull latest theme state from Shopify (captures editor changes)
-shopify theme pull --store cafepublic.ca
+shopify theme pull --store cafepublic.myshopify.com
 ```
 
 There are no tests, linters, or build steps.
