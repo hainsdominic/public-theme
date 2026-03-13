@@ -6,6 +6,12 @@
 STORE="cafepublic.myshopify.com"
 THEME="183131996466"
 
+# Skip with: SKIP_SHOPIFY_PULL=1 git push
+if [[ "$SKIP_SHOPIFY_PULL" == "1" ]]; then
+  echo "⏭️  Skipping Shopify pull (SKIP_SHOPIFY_PULL=1)"
+  exit 0
+fi
+
 echo "🔄 Pulling latest theme from Shopify ($STORE)..."
 
 if ! command -v shopify &>/dev/null; then
