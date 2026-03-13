@@ -186,6 +186,12 @@
             "collection": "escape"
           }
         },
+        "collection_EknF6P": {
+          "type": "collection",
+          "settings": {
+            "collection": "ficus-club-roasters"
+          }
+        },
         "collection_jXiUFH": {
           "type": "collection",
           "settings": {
@@ -196,12 +202,6 @@
           "type": "collection",
           "settings": {
             "collection": "jungle"
-          }
-        },
-        "collection_a7UMcP": {
-          "type": "collection",
-          "settings": {
-            "collection": "kaapeh"
           }
         },
         "collection_z7JEbY": {
@@ -226,6 +226,12 @@
           "type": "collection",
           "settings": {
             "collection": "le-club"
+          }
+        },
+        "collection_Gr9WWx": {
+          "type": "collection",
+          "settings": {
+            "collection": "le-petit-roast"
           }
         },
         "collection_fnaJkW": {
@@ -275,24 +281,19 @@
           "settings": {
             "collection": "pista"
           }
-        },
-        "collection_MbcRwQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "porte-bleue"
-          }
         }
       },
       "block_order": [
         "collection_VwPwhV",
         "collection_iQ7adc",
+        "collection_EknF6P",
         "collection_jXiUFH",
         "collection_KjC6LD",
-        "collection_a7UMcP",
         "collection_z7JEbY",
         "collection_pEfKny",
         "collection_fVf7xB",
         "collection_Ymtyrt",
+        "collection_Gr9WWx",
         "collection_fnaJkW",
         "collection_YJDydK",
         "collection_dP9XzE",
@@ -300,8 +301,7 @@
         "collection_tbxRgH",
         "collection_Ag7VwY",
         "collection_eXgXki",
-        "collection_CYVCaa",
-        "collection_MbcRwQ"
+        "collection_CYVCaa"
       ],
       "settings": {
         "gym_bigger_pastilles": true,
