@@ -38,7 +38,11 @@
           }
         }
       },
-      "block_order": ["title_Bm7afP", "title_HM3TTb", "button_i8b4qt"],
+      "block_order": [
+        "title_Bm7afP",
+        "title_HM3TTb",
+        "button_i8b4qt"
+      ],
       "name": "t:sections.rich-text.name",
       "settings": {
         "image": "shopify://shop_images/x_fd4bd152-4785-4351-8d37-41a4ee4e860c.png",
@@ -167,7 +171,11 @@
           }
         }
       },
-      "block_order": ["price_FFkx4A", "title_NJPfVm", "quick_buy_9ezVxR"],
+      "block_order": [
+        "price_FFkx4A",
+        "title_NJPfVm",
+        "quick_buy_9ezVxR"
+      ],
       "settings": {
         "heading": "Meilleurs vendeurs",
         "subheading": "",
@@ -210,9 +218,22 @@
         "title_qEmkNi": {
           "type": "title",
           "settings": {}
+        },
+        "quick_buy_ezED3K": {
+          "type": "quick_buy",
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": false,
+            "unavailable_variants": "hide"
+          }
         }
       },
-      "block_order": ["price_CjykVT", "title_qEmkNi"],
+      "block_order": [
+        "price_CjykVT",
+        "title_qEmkNi",
+        "quick_buy_ezED3K"
+      ],
       "settings": {
         "heading": "Boîtes découverte et Abonnements",
         "subheading": "",
@@ -266,7 +287,11 @@
           }
         }
       },
-      "block_order": ["price_i3YBH8", "title_yeCywV", "quick_buy_HAijrM"],
+      "block_order": [
+        "price_i3YBH8",
+        "title_yeCywV",
+        "quick_buy_HAijrM"
+      ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "heading": "Par Café Public",
