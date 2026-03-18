@@ -5,6 +5,7 @@
     allProductsHTML: null,
     originalGridHTML: null,
     originalPaginationHTML: null,
+    injected: false,
     fetching: false,
     filterPage: 1,
     perPage: 24
@@ -26,6 +27,8 @@
     const hasFilters = state.flavor.length > 0 || state.machine.length > 0;
     if (hasFilters) {
       fetchAndFilter();
+    } else {
+      prefetchAllProducts();
     }
 
     window.addEventListener('popstate', onPopState);
@@ -141,6 +144,21 @@
     }
   }
 
+  function prefetchAllProducts() {
+    if (state.allProductsHTML || state.fetching) return;
+    state.fetching = true;
+    const collectionPath = window.location.pathname;
+    fetch(`${collectionPath}?section_id=helper-collection-products`)
+      .then(response => response.text())
+      .then(html => {
+        const parsed = new DOMParser().parseFromString(html, 'text/html');
+        const helper = parsed.getElementById('helper-all-products');
+        state.allProductsHTML = helper ? helper.innerHTML : '';
+        state.fetching = false;
+      })
+      .catch(() => { state.fetching = false; });
+  }
+
   function fetchAndFilter() {
     if (state.allProductsHTML) {
       injectAllProductsAndFilter();
@@ -172,6 +190,14 @@
 
   function injectAllProductsAndFilter() {
     const grid = document.getElementById('main-collection-product-grid');
+
+    if (state.injected) {
+      grid.querySelectorAll('[data-js-product-item]').forEach(el => el.classList.remove('page-hidden'));
+      applyFilters();
+      paginateFilteredProducts();
+      return;
+    }
+
     grid.innerHTML = state.allProductsHTML;
 
     grid.querySelectorAll('template').forEach(elm => {
@@ -179,6 +205,7 @@
     });
 
     grid.classList.remove('collection-loading');
+    state.injected = true;
 
     applyFilters();
     paginateFilteredProducts();
@@ -186,6 +213,7 @@
   }
 
   function restoreOriginalGrid() {
+    state.injected = false;
     const grid = document.getElementById('main-collection-product-grid');
     grid.innerHTML = state.originalGridHTML;
 
