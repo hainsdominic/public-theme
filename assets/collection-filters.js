@@ -4,8 +4,8 @@
     machine: [],
     originalGridHTML: null,
     originalPaginationHTML: null,
-    injected: false,
     products: null,
+    offDomContainer: null,
     filterPage: 1,
     perPage: 24
   };
@@ -22,12 +22,41 @@
 
     restoreStateFromURL();
     bindFilterButtons();
+    prepareOffDomCache();
 
     if (hasActiveFilters()) {
       applyFilters();
     }
 
     window.addEventListener('popstate', onPopState);
+  }
+
+  function prepareOffDomCache() {
+    const template = document.getElementById('all-products-template');
+    if (!template) return;
+
+    var run = function() {
+      var container = document.createElement('div');
+      container.appendChild(template.content.cloneNode(true));
+
+      container.querySelectorAll('template').forEach(function(elm) {
+        elm.closest('form')?.append(elm.content.cloneNode(true));
+      });
+
+      state.offDomContainer = container;
+      state.products = Array.from(container.querySelectorAll('[data-js-product-item]')).map(function(el) {
+        return {
+          el: el,
+          collections: new Set((el.dataset.collections || '').split(',').filter(Boolean))
+        };
+      });
+    };
+
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(run);
+    } else {
+      setTimeout(run, 1);
+    }
   }
 
   function hasActiveFilters() {
@@ -139,78 +168,72 @@
   }
 
   function applyFilters() {
-    if (!state.injected) {
-      const template = document.getElementById('all-products-template');
+    if (!state.products) {
+      var template = document.getElementById('all-products-template');
       if (!template) return;
 
-      const grid = document.getElementById('main-collection-product-grid');
-      const clone = template.content.cloneNode(true);
-      grid.innerHTML = '';
-      grid.appendChild(clone);
+      var container = document.createElement('div');
+      container.appendChild(template.content.cloneNode(true));
 
-      grid.querySelectorAll('template').forEach(elm => {
+      container.querySelectorAll('template').forEach(function(elm) {
         elm.closest('form')?.append(elm.content.cloneNode(true));
       });
 
-      state.products = Array.from(grid.querySelectorAll('[data-js-product-item]')).map(el => ({
-        el,
-        collections: new Set((el.dataset.collections || '').split(',').filter(Boolean))
-      }));
-
-      state.injected = true;
-      reinitComponents();
+      state.offDomContainer = container;
+      state.products = Array.from(container.querySelectorAll('[data-js-product-item]')).map(function(el) {
+        return {
+          el: el,
+          collections: new Set((el.dataset.collections || '').split(',').filter(Boolean))
+        };
+      });
     }
 
     filterAndPaginate();
   }
 
   function filterAndPaginate() {
-    const products = state.products;
+    var products = state.products;
     if (!products) return;
 
-    const hasFlavorFilters = state.flavor.length > 0;
-    const hasMachineFilters = state.machine.length > 0;
-    const start = (state.filterPage - 1) * state.perPage;
-    const end = start + state.perPage;
-    let visibleIndex = 0;
-    let totalVisible = 0;
+    var hasFlavorFilters = state.flavor.length > 0;
+    var hasMachineFilters = state.machine.length > 0;
+    var start = (state.filterPage - 1) * state.perPage;
+    var end = start + state.perPage;
 
-    for (let i = 0; i < products.length; i++) {
-      const { el, collections } = products[i];
-      let visible = true;
+    var matched = [];
+    for (var i = 0; i < products.length; i++) {
+      var collections = products[i].collections;
+      var visible = true;
 
       if (hasFlavorFilters) {
-        for (let j = 0; j < state.flavor.length; j++) {
+        for (var j = 0; j < state.flavor.length; j++) {
           if (!collections.has(state.flavor[j])) { visible = false; break; }
         }
       }
 
       if (visible && hasMachineFilters) {
         visible = false;
-        for (let j = 0; j < state.machine.length; j++) {
+        for (var j = 0; j < state.machine.length; j++) {
           if (collections.has(state.machine[j])) { visible = true; break; }
         }
       }
 
-      if (visible) {
-        const onPage = visibleIndex >= start && visibleIndex < end;
-        el.classList.toggle('filter-hidden', false);
-        el.classList.toggle('page-hidden', !onPage);
-        visibleIndex++;
-        totalVisible++;
-      } else {
-        el.classList.add('filter-hidden');
-        el.classList.add('page-hidden');
-      }
+      if (visible) matched.push(products[i].el);
     }
 
-    renderFilterPagination(Math.ceil(totalVisible / state.perPage));
+    var grid = document.getElementById('main-collection-product-grid');
+    var pageItems = matched.slice(start, end);
+
+    grid.innerHTML = '';
+    for (var k = 0; k < pageItems.length; k++) {
+      grid.appendChild(pageItems[k].cloneNode(true));
+    }
+
+    reinitComponents();
+    renderFilterPagination(Math.ceil(matched.length / state.perPage));
   }
 
   function restoreOriginalGrid() {
-    state.injected = false;
-    state.products = null;
-
     const grid = document.getElementById('main-collection-product-grid');
     grid.innerHTML = state.originalGridHTML;
 
