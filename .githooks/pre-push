@@ -12,6 +12,11 @@ if [[ "$SKIP_SHOPIFY_PULL" == "1" ]]; then
   exit 0
 fi
 
+remote_sha=""
+while read -r local_ref local_sha remote_ref remote_sha_line; do
+  remote_sha="$remote_sha_line"
+done
+
 echo "🔄 Pulling latest theme from Shopify ($STORE)..."
 
 if ! command -v shopify &>/dev/null; then
@@ -24,15 +29,34 @@ if ! shopify theme pull --store "$STORE" --theme "$THEME" --path "$(git rev-pars
   exit 0
 fi
 
-if [[ -n $(git status --porcelain) ]]; then
+changed_files=$(git diff --name-only)
+if [[ -z "$changed_files" ]]; then
+  echo "✅ Shopify and git are in sync. Pushing..."
+  exit 0
+fi
+
+if [[ -n "$remote_sha" && "$remote_sha" != "0000000000000000000000000000000000000000" ]]; then
+  pushed_files=$(git diff --name-only "$remote_sha" HEAD 2>/dev/null)
+else
+  pushed_files=$(git diff --name-only HEAD~1 HEAD 2>/dev/null)
+fi
+
+unexpected=""
+while IFS= read -r file; do
+  if ! echo "$pushed_files" | grep -qxF "$file"; then
+    unexpected+="  $file"$'\n'
+  fi
+done <<< "$changed_files"
+
+if [[ -n "$unexpected" ]]; then
   echo ""
   echo "❌ Shopify has changes that aren't in git yet!"
   echo ""
-  git status --short
-  echo ""
+  echo "$unexpected"
   echo "Commit these first, then push again."
   exit 1
 fi
 
-echo "✅ Shopify and git are in sync. Pushing..."
+echo "✅ Shopify pull only touched files in the current commit — restoring and pushing..."
+git checkout -- .
 exit 0
