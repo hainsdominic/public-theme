@@ -15,10 +15,10 @@ No build tools — assets are pre-built and committed directly. Development uses
 git config core.hooksPath .githooks
 
 # Serve theme locally against the live store
-shopify theme dev --store cafepublic.myshopify.com
+npm run dev
 
-# Push theme to Shopify (production syncs from GitHub main branch)
-git push origin main
+# Deploy: pushes to GitHub then deploys to Shopify live store
+npm run deploy
 
 # Pull latest theme state from Shopify (captures editor changes)
 shopify theme pull --store cafepublic.myshopify.com
