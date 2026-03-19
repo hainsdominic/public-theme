@@ -2,11 +2,10 @@
   const state = {
     flavor: [],
     machine: [],
-    allProductsHTML: null,
     originalGridHTML: null,
     originalPaginationHTML: null,
     injected: false,
-    fetching: false,
+    products: null,
     filterPage: 1,
     perPage: 24
   };
@@ -24,14 +23,15 @@
     restoreStateFromURL();
     bindFilterButtons();
 
-    const hasFilters = state.flavor.length > 0 || state.machine.length > 0;
-    if (hasFilters) {
-      fetchAndFilter();
-    } else {
-      prefetchAllProducts();
+    if (hasActiveFilters()) {
+      applyFilters();
     }
 
     window.addEventListener('popstate', onPopState);
+  }
+
+  function hasActiveFilters() {
+    return state.flavor.length > 0 || state.machine.length > 0;
   }
 
   function restoreStateFromURL() {
@@ -103,19 +103,13 @@
     }
 
     state.filterPage = 1;
+    syncStateToURL();
 
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        syncStateToURL();
-
-        const hasFilters = state.flavor.length > 0 || state.machine.length > 0;
-        if (!hasFilters) {
-          restoreOriginalGrid();
-        } else {
-          fetchAndFilter();
-        }
-      });
-    });
+    if (!hasActiveFilters()) {
+      restoreOriginalGrid();
+    } else {
+      applyFilters();
+    }
   }
 
   function syncStateToURL() {
@@ -144,76 +138,79 @@
     }
   }
 
-  function prefetchAllProducts() {
-    if (state.allProductsHTML || state.fetching) return;
-    state.fetching = true;
-    const collectionPath = window.location.pathname;
-    fetch(`${collectionPath}?section_id=helper-collection-products`)
-      .then(response => response.text())
-      .then(html => {
-        const parsed = new DOMParser().parseFromString(html, 'text/html');
-        const helper = parsed.getElementById('helper-all-products');
-        state.allProductsHTML = helper ? helper.innerHTML : '';
-        state.fetching = false;
-      })
-      .catch(() => { state.fetching = false; });
-  }
+  function applyFilters() {
+    if (!state.injected) {
+      const template = document.getElementById('all-products-template');
+      if (!template) return;
 
-  function fetchAndFilter() {
-    if (state.allProductsHTML) {
-      injectAllProductsAndFilter();
-      return;
-    }
+      const grid = document.getElementById('main-collection-product-grid');
+      const clone = template.content.cloneNode(true);
+      grid.innerHTML = '';
+      grid.appendChild(clone);
 
-    if (state.fetching) return;
-    state.fetching = true;
-
-    const grid = document.getElementById('main-collection-product-grid');
-    grid.classList.add('collection-loading');
-
-    const collectionPath = window.location.pathname;
-
-    fetch(`${collectionPath}?section_id=helper-collection-products`)
-      .then(response => response.text())
-      .then(html => {
-        const parsed = new DOMParser().parseFromString(html, 'text/html');
-        const helper = parsed.getElementById('helper-all-products');
-        state.allProductsHTML = helper ? helper.innerHTML : '';
-        state.fetching = false;
-        injectAllProductsAndFilter();
-      })
-      .catch(() => {
-        state.fetching = false;
-        grid.classList.remove('collection-loading');
+      grid.querySelectorAll('template').forEach(elm => {
+        elm.closest('form')?.append(elm.content.cloneNode(true));
       });
-  }
 
-  function injectAllProductsAndFilter() {
-    const grid = document.getElementById('main-collection-product-grid');
+      state.products = Array.from(grid.querySelectorAll('[data-js-product-item]')).map(el => ({
+        el,
+        collections: new Set((el.dataset.collections || '').split(',').filter(Boolean))
+      }));
 
-    if (state.injected) {
-      grid.querySelectorAll('[data-js-product-item]').forEach(el => el.classList.remove('page-hidden'));
-      applyFilters();
-      paginateFilteredProducts();
-      return;
+      state.injected = true;
+      reinitComponents();
     }
 
-    grid.innerHTML = state.allProductsHTML;
+    filterAndPaginate();
+  }
 
-    grid.querySelectorAll('template').forEach(elm => {
-      elm.closest('form')?.append(elm.content.cloneNode(true));
-    });
+  function filterAndPaginate() {
+    const products = state.products;
+    if (!products) return;
 
-    grid.classList.remove('collection-loading');
-    state.injected = true;
+    const hasFlavorFilters = state.flavor.length > 0;
+    const hasMachineFilters = state.machine.length > 0;
+    const start = (state.filterPage - 1) * state.perPage;
+    const end = start + state.perPage;
+    let visibleIndex = 0;
+    let totalVisible = 0;
 
-    applyFilters();
-    paginateFilteredProducts();
-    reinitComponents();
+    for (let i = 0; i < products.length; i++) {
+      const { el, collections } = products[i];
+      let visible = true;
+
+      if (hasFlavorFilters) {
+        for (let j = 0; j < state.flavor.length; j++) {
+          if (!collections.has(state.flavor[j])) { visible = false; break; }
+        }
+      }
+
+      if (visible && hasMachineFilters) {
+        visible = false;
+        for (let j = 0; j < state.machine.length; j++) {
+          if (collections.has(state.machine[j])) { visible = true; break; }
+        }
+      }
+
+      if (visible) {
+        const onPage = visibleIndex >= start && visibleIndex < end;
+        el.classList.toggle('filter-hidden', false);
+        el.classList.toggle('page-hidden', !onPage);
+        visibleIndex++;
+        totalVisible++;
+      } else {
+        el.classList.add('filter-hidden');
+        el.classList.add('page-hidden');
+      }
+    }
+
+    renderFilterPagination(Math.ceil(totalVisible / state.perPage));
   }
 
   function restoreOriginalGrid() {
     state.injected = false;
+    state.products = null;
+
     const grid = document.getElementById('main-collection-product-grid');
     grid.innerHTML = state.originalGridHTML;
 
@@ -228,56 +225,6 @@
     }
 
     reinitComponents();
-  }
-
-  function applyFilters() {
-    const products = document.querySelectorAll('[data-js-product-item]');
-    const hasFlavorFilters = state.flavor.length > 0;
-    const hasMachineFilters = state.machine.length > 0;
-
-    if (!hasFlavorFilters && !hasMachineFilters) {
-      products.forEach(product => product.classList.remove('filter-hidden'));
-      return;
-    }
-
-    products.forEach(product => {
-      const collectionsAttr = product.dataset.collections || '';
-      const productCollections = collectionsAttr.split(',').filter(Boolean);
-
-      let matchesFlavor = true;
-      let matchesMachine = true;
-
-      if (hasFlavorFilters) {
-        matchesFlavor = state.flavor.every(handle => productCollections.includes(handle));
-      }
-
-      if (hasMachineFilters) {
-        matchesMachine = state.machine.some(handle => productCollections.includes(handle));
-      }
-
-      if (matchesFlavor && matchesMachine) {
-        product.classList.remove('filter-hidden');
-      } else {
-        product.classList.add('filter-hidden');
-      }
-    });
-  }
-
-  function paginateFilteredProducts() {
-    const visible = Array.from(document.querySelectorAll('[data-js-product-item]:not(.filter-hidden)'));
-    const totalPages = Math.ceil(visible.length / state.perPage);
-    const start = (state.filterPage - 1) * state.perPage;
-    const end = start + state.perPage;
-
-    visible.forEach((el, i) => {
-      if (i >= start && i < end) {
-        el.classList.remove('page-hidden');
-      } else {
-        el.classList.add('page-hidden');
-      }
-    });
-
-    renderFilterPagination(totalPages);
   }
 
   function renderFilterPagination(totalPages) {
@@ -328,7 +275,7 @@
       link.addEventListener('click', function(e) {
         e.preventDefault();
         state.filterPage = parseInt(this.dataset.filterPage, 10);
-        paginateFilteredProducts();
+        filterAndPaginate();
         var grid = document.getElementById('main-collection-product-grid');
         if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
@@ -360,11 +307,10 @@
 
       syncButtonStates();
 
-      const hasFilters = state.flavor.length > 0 || state.machine.length > 0;
-      if (!hasFilters) {
+      if (!hasActiveFilters()) {
         restoreOriginalGrid();
       } else {
-        fetchAndFilter();
+        applyFilters();
       }
     } else {
       state.flavor = [];

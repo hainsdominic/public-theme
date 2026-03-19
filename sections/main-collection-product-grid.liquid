@@ -182,6 +182,14 @@
 
   {%- endpaginate -%}
 
+  {%- paginate collection.products by 999 -%}
+    <template id="all-products-template">
+      {%- for product in collection.products -%}
+        {%- render 'product-item', product: product, section_blocks: section.blocks, index: forloop.index, layout: sizes_class, mobile_layout: section.settings.layout_mobile, show_badges: settings.show_badges, section_id: section.id, product_collection: collection -%}
+      {%- endfor -%}
+    </template>
+  {%- endpaginate -%}
+
 </div>
 
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
