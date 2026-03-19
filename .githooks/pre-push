@@ -1,10 +1,20 @@
 #!/bin/bash
 
-# Pre-push hook: pull latest Shopify theme state before pushing
-# Prevents overwriting client changes made in the Shopify editor
+# Pre-push hook: pull latest Shopify theme state before pushing,
+# then deploy the theme to Shopify after push succeeds.
 
 STORE="cafepublic.myshopify.com"
 THEME="183131996466"
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+deploy_to_shopify() {
+  echo "🚀 Deploying theme to Shopify ($STORE)..."
+  if shopify theme push --store "$STORE" --theme "$THEME" --path "$REPO_ROOT" --allow-live; then
+    echo "✅ Theme deployed to Shopify."
+  else
+    echo "⚠️  Shopify deploy failed — push succeeded but theme was not updated."
+  fi
+}
 
 # Skip with: SKIP_SHOPIFY_PULL=1 git push
 if [[ "$SKIP_SHOPIFY_PULL" == "1" ]]; then
@@ -24,7 +34,7 @@ if ! command -v shopify &>/dev/null; then
   exit 0
 fi
 
-if ! shopify theme pull --store "$STORE" --theme "$THEME" --path "$(git rev-parse --show-toplevel)" 2>&1; then
+if ! shopify theme pull --store "$STORE" --theme "$THEME" --path "$REPO_ROOT" 2>&1; then
   echo "⚠️  Could not pull from Shopify. Continuing push — verify manually if client may have made editor changes."
   exit 0
 fi
@@ -32,6 +42,7 @@ fi
 changed_files=$(git diff --name-only)
 if [[ -z "$changed_files" ]]; then
   echo "✅ Shopify and git are in sync. Pushing..."
+  deploy_to_shopify &
   exit 0
 fi
 
@@ -59,4 +70,6 @@ fi
 
 echo "✅ Shopify pull only touched files in the current commit — restoring and pushing..."
 git checkout -- .
+deploy_to_shopify &
+
 exit 0
