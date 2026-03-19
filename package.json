@@ -1,0 +1,8 @@
+{
+  "name": "public-theme",
+  "private": true,
+  "scripts": {
+    "dev": "shopify theme dev --store cafepublic.myshopify.com",
+    "deploy": "git push origin main && shopify theme push --store cafepublic.myshopify.com --theme 183131996466 --allow-live"
+  }
+}
