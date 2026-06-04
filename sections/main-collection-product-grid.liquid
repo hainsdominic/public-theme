@@ -89,17 +89,6 @@
                   </div>
                 {%- endif -%}
 
-                {%- if section.settings.filter_collection_machines != blank -%}
-                  <label class="text-weight--medium additional_mobile">
-                    Types de machine
-                  </label>
-                  <div class="additional-content additional_mobile">
-                    {% for gym_collection_machine in section.settings.filter_collection_machines %}
-                        {% render 'collection-filter-item', collection: gym_collection_machine, filter_type: 'machine', text_alignment: section.settings.text_alignment, index: custom_index, sizes: sizes, image_aspect_ratio: section.settings.image_aspect_ratio, image_border_radius: section.settings.image_border_radius %}
-                    {% endfor %}
-                  </div>
-                {%- endif -%}
-
               </div>
             {%- endunless -%}
             <div id="main-collection-product-grid" data-id="{{ section.id }}" data-collection-handle="{{ collection.handle }}" data-products-per-page="{{ section.settings.products_number | default: 24 }}" class="collection grid grid--layout
