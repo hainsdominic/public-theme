@@ -183,7 +183,7 @@
     "border_width_buttons": 1,
     "border_radius_buttons": 30,
     "product_card_aspect_ratio": "1",
-    "product_card_aspect_ratio_fit": true,
+    "product_card_aspect_ratio_fit": false,
     "proudct_card_aspect_ratio_padding": 10,
     "product_card_background": "rgba(0,0,0,0)",
     "product_card_border": "rgba(0,0,0,0)",

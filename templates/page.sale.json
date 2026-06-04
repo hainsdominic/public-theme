@@ -35,6 +35,12 @@
             "collection": "anatolia"
           }
         },
+        "collection_MrazXM": {
+          "type": "collection",
+          "settings": {
+            "collection": "andy-torrefacteur"
+          }
+        },
         "collection_gtBpAy": {
           "type": "collection",
           "settings": {
@@ -113,28 +119,23 @@
             "collection": "colorfull"
           }
         },
+        "collection_Qa8zpz": {
+          "type": "collection",
+          "settings": {
+            "collection": "couleur-cafe"
+          }
+        },
         "collection_3KnUWn": {
           "type": "collection",
           "settings": {
             "collection": "dispatch"
-          }
-        },
-        "collection_URbazz": {
-          "type": "collection",
-          "settings": {
-            "collection": "dual-microtorrefacteur"
-          }
-        },
-        "collection_xPnk6R": {
-          "type": "collection",
-          "settings": {
-            "collection": "duck-duck-coffee"
           }
         }
       },
       "block_order": [
         "collection_MaW4KB",
         "collection_JMPJm8",
+        "collection_MrazXM",
         "collection_gtBpAy",
         "collection_cUCAW9",
         "collection_etXE3H",
@@ -148,9 +149,8 @@
         "collection_EeXWM4",
         "collection_kj8JYG",
         "collection_VaqdUP",
-        "collection_3KnUWn",
-        "collection_URbazz",
-        "collection_xPnk6R"
+        "collection_Qa8zpz",
+        "collection_3KnUWn"
       ],
       "settings": {
         "gym_bigger_pastilles": true,
@@ -174,6 +174,24 @@
     "collection_list_pmPDUY": {
       "type": "collection-list",
       "blocks": {
+        "collection_CaamwF": {
+          "type": "collection",
+          "settings": {
+            "collection": "dreamy"
+          }
+        },
+        "collection_4ayqwp": {
+          "type": "collection",
+          "settings": {
+            "collection": "dual-microtorrefacteur"
+          }
+        },
+        "collection_aNHNan": {
+          "type": "collection",
+          "settings": {
+            "collection": "duck-duck-coffee"
+          }
+        },
         "collection_VwPwhV": {
           "type": "collection",
           "settings": {
@@ -184,6 +202,12 @@
           "type": "collection",
           "settings": {
             "collection": "escape"
+          }
+        },
+        "collection_UGGncV": {
+          "type": "collection",
+          "settings": {
+            "collection": "even"
           }
         },
         "collection_EknF6P": {
@@ -234,6 +258,12 @@
             "collection": "le-petit-roast"
           }
         },
+        "collection_w8e3Rg": {
+          "type": "collection",
+          "settings": {
+            "collection": "locomotive"
+          }
+        },
         "collection_fnaJkW": {
           "type": "collection",
           "settings": {
@@ -251,41 +281,15 @@
           "settings": {
             "collection": "micro-espresso"
           }
-        },
-        "collection_HdABjx": {
-          "type": "collection",
-          "settings": {
-            "collection": "monogram-coffee"
-          }
-        },
-        "collection_tbxRgH": {
-          "type": "collection",
-          "settings": {
-            "collection": "myriade"
-          }
-        },
-        "collection_Ag7VwY": {
-          "type": "collection",
-          "settings": {
-            "collection": "naess"
-          }
-        },
-        "collection_eXgXki": {
-          "type": "collection",
-          "settings": {
-            "collection": "nordik"
-          }
-        },
-        "collection_CYVCaa": {
-          "type": "collection",
-          "settings": {
-            "collection": "pista"
-          }
         }
       },
       "block_order": [
+        "collection_CaamwF",
+        "collection_4ayqwp",
+        "collection_aNHNan",
         "collection_VwPwhV",
         "collection_iQ7adc",
+        "collection_UGGncV",
         "collection_EknF6P",
         "collection_jXiUFH",
         "collection_KjC6LD",
@@ -294,14 +298,10 @@
         "collection_fVf7xB",
         "collection_Ymtyrt",
         "collection_Gr9WWx",
+        "collection_w8e3Rg",
         "collection_fnaJkW",
         "collection_YJDydK",
-        "collection_dP9XzE",
-        "collection_HdABjx",
-        "collection_tbxRgH",
-        "collection_Ag7VwY",
-        "collection_eXgXki",
-        "collection_CYVCaa"
+        "collection_dP9XzE"
       ],
       "settings": {
         "gym_bigger_pastilles": true,
@@ -325,6 +325,48 @@
     "collection_list_FKgATP": {
       "type": "collection-list",
       "blocks": {
+        "collection_X3N4BG": {
+          "type": "collection",
+          "settings": {
+            "collection": "monogram-coffee"
+          }
+        },
+        "collection_LnkL4k": {
+          "type": "collection",
+          "settings": {
+            "collection": "myriade"
+          }
+        },
+        "collection_ymHFEg": {
+          "type": "collection",
+          "settings": {
+            "collection": "naess"
+          }
+        },
+        "collection_7UCt9m": {
+          "type": "collection",
+          "settings": {
+            "collection": "naked-dog"
+          }
+        },
+        "collection_HyTeLF": {
+          "type": "collection",
+          "settings": {
+            "collection": "nordik"
+          }
+        },
+        "collection_Y3fWqh": {
+          "type": "collection",
+          "settings": {
+            "collection": "philo-coffee"
+          }
+        },
+        "collection_EU4zwE": {
+          "type": "collection",
+          "settings": {
+            "collection": "pista"
+          }
+        },
         "collection_ggUjBC": {
           "type": "collection",
           "settings": {
@@ -353,12 +395,6 @@
           "type": "collection",
           "settings": {
             "collection": "torque"
-          }
-        },
-        "collection_QJXRmQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "torrefacteurs-sans-frontieres"
           }
         },
         "collection_XERdDe": {
@@ -393,12 +429,18 @@
         }
       },
       "block_order": [
+        "collection_X3N4BG",
+        "collection_LnkL4k",
+        "collection_ymHFEg",
+        "collection_7UCt9m",
+        "collection_HyTeLF",
+        "collection_Y3fWqh",
+        "collection_EU4zwE",
         "collection_ggUjBC",
         "collection_7JKKqc",
         "collection_6erzpk",
         "collection_rtTqLW",
         "collection_LwwrYi",
-        "collection_QJXRmQ",
         "collection_XERdDe",
         "collection_ckxCbL",
         "collection_bXQEJD",
