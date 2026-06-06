@@ -356,9 +356,9 @@ ul li strong,
         transform: scale(0.97);
     }
     .quick-filter-row__scroller .collection-filter-btn.active {
-        background-color: var(--color-text-main);
-        color: var(--color-foreground-main);
-        border-color: var(--color-text-main);
+        background-color: #4b2815;
+        color: #ffffff;
+        border-color: #4b2815;
     }
     .quick-filter-row__scroller .collection-filter-btn .pill__icon {
         width: auto;
