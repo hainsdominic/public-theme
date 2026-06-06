@@ -109,7 +109,8 @@ ul li strong,
     margin-top:2.5rem;
 }
 
-.additional-content.additional_mobile{
+.additional-content.additional_mobile,
+.quick-filter-row.additional_mobile {
     display:none;
 }
 
@@ -299,6 +300,84 @@ ul li strong,
 
     .additional-content .gutter-top--regular {
         padding-left:0;
+    }
+
+    .quick-filter-row.additional_mobile {
+        display: block;
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+        margin-right: -1rem;
+        margin-bottom: 1.25rem;
+    }
+    .quick-filter-row__label {
+        display: block;
+        font-size: 1rem;
+        font-weight: var(--font-weight-buttons, 500);
+        color: var(--color-text-main);
+        margin: 0 0 0.75rem;
+        padding-inline-start: 1rem;
+    }
+    .quick-filter-row__scroller {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x proximity;
+        scroll-padding-inline-start: 1rem;
+        padding: 0.125rem 1rem 0.5rem;
+        scrollbar-width: none;
+    }
+    .quick-filter-row__scroller::-webkit-scrollbar {
+        display: none;
+    }
+    .quick-filter-row__scroller .collection-filter-btn {
+        scroll-snap-align: start;
+        flex: 0 0 auto;
+        width: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4375rem 0.9375rem;
+        background-color: transparent;
+        color: var(--color-text-main);
+        border: var(--border-width-buttons, 1px) solid var(--color-borders-forms-primary);
+        border-radius: var(--border-radius-buttons, 999px);
+        line-height: 1.25;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 0.875rem;
+        font-weight: var(--font-weight-buttons, 500);
+        min-height: 2.375rem;
+        text-align: left;
+        transition: background-color 175ms linear, color 175ms linear, border-color 175ms linear, transform 120ms ease;
+    }
+    .quick-filter-row__scroller .collection-filter-btn:active {
+        transform: scale(0.97);
+    }
+    .quick-filter-row__scroller .collection-filter-btn.active {
+        background-color: var(--color-text-main);
+        color: var(--color-foreground-main);
+        border-color: var(--color-text-main);
+    }
+    .quick-filter-row__scroller .collection-filter-btn .pill__icon {
+        width: auto;
+        height: auto;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        background: none;
+        border: 0;
+        border-radius: 0;
+        overflow: visible;
+    }
+    .quick-filter-row__scroller .collection-filter-btn .pill__icon img {
+        height: 1.75rem;
+        width: auto;
+        max-width: none;
+        max-height: none;
+        object-fit: contain;
+        border-radius: 0;
     }
 
     .lap--grid--slider {

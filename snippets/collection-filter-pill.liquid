@@ -1,0 +1,33 @@
+<button
+  class="collection-filter-btn js-collection-filter-btn pill pill--compact pill--has-icon"
+  data-filter-handle="{{ collection.handle }}"
+  data-filter-type="{{ filter_type }}"
+  type="button"
+>
+  <span class="pill__icon">
+    {%- liquid
+      assign collection_image = collection.featured_image
+    -%}
+    {%- if collection_image != blank -%}
+      <img
+        src="{{ collection_image | image_url: width: 56 }}"
+        srcset="
+          {{ collection_image | image_url: width: 56 }} 56w,
+          {{ collection_image | image_url: width: 112 }} 112w
+        "
+        sizes="28px"
+        loading="lazy"
+        alt="{{ collection.title | escape }}"
+      />
+    {%- endif -%}
+  </span>
+  <span>
+    {%- liquid
+      unless collection.title == blank
+        echo collection.title | escape
+      else
+        echo 'general.onboarding.collection_title' | t
+      endunless
+    -%}
+  </span>
+</button>

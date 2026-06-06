@@ -82,21 +82,24 @@
             {%- unless collection.products_count == 0 -%}
               <div class="collection-heading-container grid grid--layout grid-1 grid-palm-1 {{ heading_continer_mobile }}  {{ heading_continer_desktop }}">{%- render 'facets-header', results: collection -%}
                 {%- if section.settings.filter_collection != blank -%}
-                  <div class="additional-content additional_mobile">
-                    {% for gym_collection in section.settings.filter_collection %}
-                        {% render 'collection-filter-item', collection: gym_collection, filter_type: 'flavor', text_alignment: section.settings.text_alignment, index: custom_index, sizes: sizes, image_aspect_ratio: section.settings.image_aspect_ratio, image_border_radius: section.settings.image_border_radius %}
-                    {% endfor %}
+                  <div class="quick-filter-row additional_mobile">
+                    <span class="quick-filter-row__label text-size--small">Saveurs</span>
+                    <div class="quick-filter-row__scroller">
+                      {% for gym_collection in section.settings.filter_collection %}
+                        {% render 'collection-filter-pill', collection: gym_collection, filter_type: 'flavor' %}
+                      {% endfor %}
+                    </div>
                   </div>
                 {%- endif -%}
 
                 {%- if section.settings.filter_collection_machines != blank -%}
-                  <label class="text-weight--medium additional_mobile">
-                    Types de machine
-                  </label>
-                  <div class="additional-content additional_mobile">
-                    {% for gym_collection_machine in section.settings.filter_collection_machines %}
-                        {% render 'collection-filter-item', collection: gym_collection_machine, filter_type: 'machine', text_alignment: section.settings.text_alignment, index: custom_index, sizes: sizes, image_aspect_ratio: section.settings.image_aspect_ratio, image_border_radius: section.settings.image_border_radius %}
-                    {% endfor %}
+                  <div class="quick-filter-row additional_mobile">
+                    <span class="quick-filter-row__label text-size--small">Type de machine</span>
+                    <div class="quick-filter-row__scroller">
+                      {% for gym_collection_machine in section.settings.filter_collection_machines %}
+                        {% render 'collection-filter-pill', collection: gym_collection_machine, filter_type: 'machine' %}
+                      {% endfor %}
+                    </div>
                   </div>
                 {%- endif -%}
 
