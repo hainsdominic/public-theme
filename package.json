@@ -3,6 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "shopify theme dev --store cafepublic.myshopify.com",
-    "deploy": "git push origin main && shopify theme push --store cafepublic.myshopify.com --theme 183131996466 --allow-live"
+    "deploy": "git push origin main && shopify theme push --store cafepublic.myshopify.com --theme 185609093426 --allow-live && shopify theme publish --store cafepublic.myshopify.com --theme 185609093426",
+    "pull": "shopify theme pull --store cafepublic.myshopify.com --theme 185609093426",
+    "share": "shopify theme share --store cafepublic.myshopify.com",
+    "list": "shopify theme list --store cafepublic.myshopify.com",
+    "open": "shopify theme open --store cafepublic.myshopify.com --theme 185609093426"
   }
 }
