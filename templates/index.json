@@ -17,7 +17,7 @@
           "settings": {
             "title": "Les cafés des micro-torréfacteurs",
             "title_size": "heading-size--small",
-            "seo_h_tag": "h2"
+            "seo_h_tag": "h1"
           }
         },
         "title_k8PYfA": {
@@ -31,8 +31,8 @@
         "button_i8b4qt": {
           "type": "button",
           "settings": {
-            "button_label": "Voir les cafés les plus populaires",
-            "link": "shopify://collections/saveurs",
+            "button_label": "Voir nos cafés corsés",
+            "link": "shopify://collections/corse-et-fume",
             "open_in_new_window": false,
             "button_style": "solid"
           }
@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
-        "image": "shopify://shop_images/IMG_3041_1.png",
+        "image": "shopify://shop_images/b_6a8e89dd-01fe-46ec-87a7-338e3e50087f.png",
         "video_controls": false,
         "image_position": "right",
         "height": "small",
@@ -117,6 +117,7 @@
         "collection_QNLTeQ",
         "collection_HGwy8V"
       ],
+      "custom_css": [],
       "settings": {
         "gym_bigger_pastilles": true,
         "heading": "Cafés par profil de saveur",
@@ -180,7 +181,71 @@
         "seo_h_tag": "h2"
       }
     },
-    "divider_6WQHP3": {
+    "divider_UjprM7": {
+      "type": "divider",
+      "name": "t:divider.label",
+      "settings": {
+        "height": 20,
+        "is_fullwidth": true,
+        "color": "#fffff9",
+        "style": "solid",
+        "gutter_decrease": false,
+        "remove_margin": false,
+        "remove_bottom_margin": false,
+        "decrease_bottom_margin": false
+      }
+    },
+    "media_with_text_overlay_4EbcWm": {
+      "type": "media-with-text-overlay",
+      "blocks": {
+        "image_m3niwP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_06773c74-4377-4761-a9e1-bcfa03e57f6a.png",
+            "caption": "",
+            "title": "",
+            "subtitle": "",
+            "link": "https://cafepublic.ca/collections/abonnements",
+            "open_in_new_window": false,
+            "button_label": "Boîtes Découvertes et Abonnements",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "show_horizontal_line": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_m3niwP"
+      ],
+      "name": "t:sections.local-extra-words.sections.media-with-text-overlay.name",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--center section-heading--two-rows",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "grid-1",
+        "height": "small",
+        "alignment": "horizontal-center align-content--vertical-bottom",
+        "width": "60%",
+        "caption_size": "text-size--regular",
+        "title_size": "heading-size--small",
+        "subtitle_size": "text-size--regular",
+        "spacing": 18,
+        "button_style": "solid",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_background_gradient": "",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "gutter_decrease": false,
+        "remove_top_margin": false,
+        "remove_bottom_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "divider_zGnDYY": {
       "type": "divider",
       "name": "t:divider.label",
       "settings": {
@@ -222,7 +287,7 @@
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "heading": "Nouveautés",
+        "heading": "Nouveautés du mois",
         "subheading": "",
         "section_heading_size": "text-size--large",
         "section_heading_layout": "section-heading--center section-heading--two-rows",
@@ -239,11 +304,11 @@
         "seo_h_tag": "h2"
       }
     },
-    "divider_TFCTQp": {
+    "divider_GWcMyH": {
       "type": "divider",
       "name": "t:divider.label",
       "settings": {
-        "height": 20,
+        "height": 1,
         "is_fullwidth": true,
         "color": "#fffff9",
         "style": "solid",
@@ -253,121 +318,153 @@
         "decrease_bottom_margin": false
       }
     },
-    "featured_collection_hDYrpw": {
-      "type": "featured-collection",
+    "divider_VKtLzG": {
+      "type": "divider",
+      "name": "t:divider.label",
+      "settings": {
+        "height": 15,
+        "is_fullwidth": true,
+        "color": "#fffff9",
+        "style": "solid",
+        "gutter_decrease": false,
+        "remove_margin": false,
+        "remove_bottom_margin": false,
+        "decrease_bottom_margin": false
+      }
+    },
+    "media_with_text_overlay_wnCtji": {
+      "type": "media-with-text-overlay",
       "blocks": {
-        "price_CjykVT": {
-          "type": "price",
-          "settings": {}
-        },
-        "title_qEmkNi": {
-          "type": "title",
-          "settings": {}
-        },
-        "quick_buy_ezED3K": {
-          "type": "quick_buy",
+        "image_fjJeDU": {
+          "type": "image",
           "settings": {
-            "show_only_available": false,
-            "variant_default": true,
-            "show_price": false,
-            "unavailable_variants": "hide"
+            "image": "shopify://shop_images/2_3955b1f1-79a7-4ef1-a261-616df6ff2188.png",
+            "caption": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/cafe-collectif",
+            "open_in_new_window": false,
+            "button_label": "Produits Café Public",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "show_horizontal_line": false,
+            "seo_h_tag": "h3"
           }
         }
       },
       "block_order": [
-        "price_CjykVT",
-        "title_qEmkNi",
-        "quick_buy_ezED3K"
+        "image_fjJeDU"
       ],
+      "name": "t:sections.local-extra-words.sections.media-with-text-overlay.name",
       "settings": {
-        "heading": "Boîtes Découverte et Abonnements",
+        "heading": "",
         "subheading": "",
-        "section_heading_size": "text-size--large",
-        "section_heading_layout": "section-heading--center section-heading--two-rows",
-        "show_view_all": true,
-        "layout": "grid-4 grid-portable-3 grid-lap-2",
-        "layout_mobile": "grid-palm-2",
-        "products_number": 4,
-        "collection": "abonnements",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "full",
+        "height": "small",
+        "alignment": "horizontal-center align-content--vertical-bottom",
+        "width": "60%",
+        "caption_size": "text-size--regular",
+        "title_size": "heading-size--small",
+        "subtitle_size": "text-size--regular",
+        "spacing": 60,
+        "button_style": "solid",
+        "border_radius": 0,
         "section_background_color": "rgba(0,0,0,0)",
         "section_background_gradient": "",
         "section_heading_color": "rgba(0,0,0,0)",
         "gutter_decrease": false,
+        "remove_top_margin": false,
         "remove_bottom_margin": false,
         "seo_h_tag": "h2"
       }
     },
-    "divider_TfhLLf": {
-      "type": "divider",
-      "name": "t:divider.label",
-      "settings": {
-        "height": 30,
-        "is_fullwidth": true,
-        "color": "#fffff9",
-        "style": "solid",
-        "gutter_decrease": false,
-        "remove_margin": false,
-        "remove_bottom_margin": false,
-        "decrease_bottom_margin": false
-      }
-    },
-    "featured_collection_iegEyz": {
-      "type": "featured-collection",
+    "177989572976517731": {
+      "type": "apps",
       "blocks": {
-        "price_i3YBH8": {
-          "type": "price",
-          "settings": {}
-        },
-        "title_yeCywV": {
-          "type": "title",
-          "settings": {}
-        },
-        "quick_buy_HAijrM": {
-          "type": "quick_buy",
+        "judge_me_reviews_featured_carousel_VUC7zt": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "show_only_available": false,
-            "variant_default": true,
-            "show_price": false,
-            "unavailable_variants": "hide"
+            "maxwidth": 1080
           }
         }
       },
       "block_order": [
-        "price_i3YBH8",
-        "title_yeCywV",
-        "quick_buy_HAijrM"
+        "judge_me_reviews_featured_carousel_VUC7zt"
       ],
-      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "heading": "Produits Café Public",
+        "heading": "",
         "subheading": "",
-        "section_heading_size": "text-size--large",
-        "section_heading_layout": "section-heading--center section-heading--two-rows",
-        "show_view_all": true,
-        "layout": "grid-4 grid-portable-3 grid-lap-2",
-        "layout_mobile": "grid-palm-2",
-        "products_number": 4,
-        "collection": "cafe-collectif",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_background_gradient": "",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "gutter_decrease": false,
-        "remove_bottom_margin": false,
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "full_width": false,
+        "remove_margin": false,
         "seo_h_tag": "h2"
       }
     },
-    "divider_JbFdxG": {
-      "type": "divider",
-      "name": "t:divider.label",
+    "17798902646c14f819": {
+      "type": "apps",
+      "blocks": {
+        "rivyo_reviews_loyalty_wc_all_product_reviews_qdEiNR": {
+          "type": "shopify://apps/rivyo-reviews-loyalty/blocks/wc-all-product-reviews/f1860e84-309f-40ca-a2df-188435a622f3",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "rivyo_reviews_loyalty_wc_all_product_reviews_qdEiNR"
+      ],
       "settings": {
-        "height": 30,
-        "is_fullwidth": true,
-        "color": "#fffff9",
-        "style": "solid",
-        "gutter_decrease": false,
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "full_width": false,
         "remove_margin": false,
-        "remove_bottom_margin": false,
-        "decrease_bottom_margin": false
+        "seo_h_tag": "h2"
+      }
+    },
+    "17798919398dc816c0": {
+      "type": "apps",
+      "blocks": {
+        "rivyo_reviews_loyalty_wc_all_product_reviews_6q99Dk": {
+          "type": "shopify://apps/rivyo-reviews-loyalty/blocks/wc-all-product-reviews/f1860e84-309f-40ca-a2df-188435a622f3",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "rivyo_reviews_loyalty_wc_all_product_reviews_6q99Dk"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "full_width": false,
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "17798919622c8e7533": {
+      "type": "apps",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "full_width": false,
+        "remove_margin": false,
+        "seo_h_tag": "h2"
       }
     },
     "collection_list_zK9GY4": {
@@ -413,6 +510,12 @@
           "type": "collection",
           "settings": {
             "collection": "binocle"
+          }
+        },
+        "collection_cxwFgg": {
+          "type": "collection",
+          "settings": {
+            "collection": "brewlant"
           }
         },
         "collection_rmQUhF": {
@@ -474,12 +577,6 @@
           "settings": {
             "collection": "couleur-cafe"
           }
-        },
-        "collection_Hbkp6R": {
-          "type": "collection",
-          "settings": {
-            "collection": "dispatch"
-          }
         }
       },
       "block_order": [
@@ -490,6 +587,7 @@
         "collection_McRDjq",
         "collection_p6WhTB",
         "collection_mAztAh",
+        "collection_cxwFgg",
         "collection_rmQUhF",
         "collection_h3A9Tw",
         "collection_WA8CJR",
@@ -499,8 +597,7 @@
         "collection_6r6W93",
         "collection_UbEm9d",
         "collection_Lkz7UA",
-        "collection_p96NLP",
-        "collection_Hbkp6R"
+        "collection_p96NLP"
       ],
       "settings": {
         "gym_bigger_pastilles": true,
@@ -524,6 +621,12 @@
     "collection_list_bJ6miB": {
       "type": "collection-list",
       "blocks": {
+        "collection_a7GEpn": {
+          "type": "collection",
+          "settings": {
+            "collection": "dispatch"
+          }
+        },
         "collection_WairT7": {
           "type": "collection",
           "settings": {
@@ -625,15 +728,10 @@
           "settings": {
             "collection": "melk"
           }
-        },
-        "collection_6MwAxf": {
-          "type": "collection",
-          "settings": {
-            "collection": "micro-espresso"
-          }
         }
       },
       "block_order": [
+        "collection_a7GEpn",
         "collection_WairT7",
         "collection_BaKETx",
         "collection_dgnKJf",
@@ -650,8 +748,7 @@
         "collection_eKweWj",
         "collection_8mhmPL",
         "collection_eyRi9i",
-        "collection_GCh4Qi",
-        "collection_6MwAxf"
+        "collection_GCh4Qi"
       ],
       "settings": {
         "gym_bigger_pastilles": true,
@@ -675,6 +772,12 @@
     "collection_list_ta77TP": {
       "type": "collection-list",
       "blocks": {
+        "collection_YUzide": {
+          "type": "collection",
+          "settings": {
+            "collection": "micro-espresso"
+          }
+        },
         "collection_bDWqfk": {
           "type": "collection",
           "settings": {
@@ -703,6 +806,12 @@
           "type": "collection",
           "settings": {
             "collection": "nordik"
+          }
+        },
+        "collection_pn7jaX": {
+          "type": "collection",
+          "settings": {
+            "collection": "philo-coffee"
           }
         },
         "collection_biYePR": {
@@ -773,11 +882,13 @@
         }
       },
       "block_order": [
+        "collection_YUzide",
         "collection_bDWqfk",
         "collection_T4wx86",
         "collection_fi9nBb",
         "collection_bpeBVA",
         "collection_7Jg6e4",
+        "collection_pn7jaX",
         "collection_biYePR",
         "collection_tef4fc",
         "collection_NRRweR",
@@ -895,13 +1006,17 @@
     "rich_text_w6LEEQ",
     "collection_list_xndrFP",
     "featured_collection_ifGty4",
-    "divider_6WQHP3",
+    "divider_UjprM7",
+    "media_with_text_overlay_4EbcWm",
+    "divider_zGnDYY",
     "featured_collection_MLAUKn",
-    "divider_TFCTQp",
-    "featured_collection_hDYrpw",
-    "divider_TfhLLf",
-    "featured_collection_iegEyz",
-    "divider_JbFdxG",
+    "divider_GWcMyH",
+    "divider_VKtLzG",
+    "media_with_text_overlay_wnCtji",
+    "177989572976517731",
+    "17798902646c14f819",
+    "17798919398dc816c0",
+    "17798919622c8e7533",
     "collection_list_zK9GY4",
     "collection_list_bJ6miB",
     "collection_list_ta77TP",
