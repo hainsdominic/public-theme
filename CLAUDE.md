@@ -11,22 +11,22 @@ Shopify theme for **Café Public** (cafepublic.myshopify.com) — a Quebec-based
 No build tools — assets are pre-built and committed directly. Development uses the Shopify CLI:
 
 ```bash
-# First-time setup: enable the pre-push hook that pulls from Shopify before pushing
-git config core.hooksPath .githooks
-
 # Serve theme locally against the live store
 npm run dev
 
-# Deploy: pushes to GitHub then deploys to Shopify live store
-npm run deploy
+# Pull latest theme state from Shopify (run this FIRST each session to capture editor changes)
+npm run pull
 
-# Pull latest theme state from Shopify (captures editor changes)
-shopify theme pull --store cafepublic.myshopify.com
+# Push to the live theme without re-publishing
+npm run push
+
+# Deploy: pushes to GitHub, then pushes + publishes the Shopify live theme
+npm run deploy
 ```
 
 There are no tests, linters, or build steps.
 
-The **pre-push hook** (`.githooks/pre-push`) automatically runs `shopify theme pull` before every push. If the client made changes in the Shopify editor that aren't committed, the push is blocked until you commit them. This prevents overwriting editor changes.
+**Always `npm run pull` before pushing.** The client sometimes edits the store in the Shopify editor; pulling first captures those changes so a push doesn't overwrite them. A pull will revert any local files that aren't yet on the live theme, so after pulling, restore your in-progress work with `git checkout HEAD -- <files>` and commit any genuine editor changes separately.
 
 ## Architecture
 
