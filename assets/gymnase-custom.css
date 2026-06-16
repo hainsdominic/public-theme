@@ -302,31 +302,49 @@ ul li strong,
         padding-left:0;
     }
 
+    /* Kill the phantom empty heading row (count/active-facets are hidden on
+       mobile) so there's no dead gap between the title and the filters */
+    .collection-heading-container .collection-heading {
+        display: none;
+    }
+    .collection-heading-container.grid {
+        grid-gap: 0.625rem;
+    }
+
     .quick-filter-row.additional_mobile {
-        display: block;
+        display: flex;
+        align-items: center;
+        gap: 0;
         width: calc(100% + 2rem);
-        margin-left: -1rem;
-        margin-right: -1rem;
-        margin-bottom: 1.25rem;
+        margin: 0 -1rem;
     }
     .quick-filter-row__label {
-        display: block;
-        font-size: 1rem;
-        font-weight: var(--font-weight-buttons, 500);
-        color: var(--color-text-main);
-        margin: 0 0 0.75rem;
+        flex: 0 0 auto;
+        width: 4.5rem;
         padding-inline-start: 1rem;
+        margin: 0;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--color-text-main);
+        opacity: 0.55;
+        line-height: 1.15;
     }
     .quick-filter-row__scroller {
+        flex: 1 1 auto;
+        min-width: 0;
         display: flex;
-        gap: 0.5rem;
+        gap: 0.375rem;
         overflow-x: auto;
         overflow-y: visible;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x proximity;
-        scroll-padding-inline-start: 1rem;
-        padding: 0.125rem 1rem 0.5rem;
+        scroll-padding-inline-start: 0.625rem;
+        padding: 0.25rem 1rem 0.25rem 0.625rem;
         scrollbar-width: none;
+        -webkit-mask-image: linear-gradient(to right, transparent 0, #000 0.625rem);
+        mask-image: linear-gradient(to right, transparent 0, #000 0.625rem);
     }
     .quick-filter-row__scroller::-webkit-scrollbar {
         display: none;
@@ -337,18 +355,18 @@ ul li strong,
         width: auto;
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
-        padding: 0.4375rem 0.9375rem;
+        gap: 0.375rem;
+        padding: 0.3125rem 0.6875rem;
         background-color: transparent;
         color: var(--color-text-main);
         border: var(--border-width-buttons, 1px) solid var(--color-borders-forms-primary);
         border-radius: var(--border-radius-buttons, 999px);
-        line-height: 1.25;
+        line-height: 1.2;
         white-space: nowrap;
         cursor: pointer;
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
         font-weight: var(--font-weight-buttons, 500);
-        min-height: 2.375rem;
+        min-height: 2rem;
         text-align: left;
         transition: background-color 175ms linear, color 175ms linear, border-color 175ms linear, transform 120ms ease;
     }
@@ -372,12 +390,20 @@ ul li strong,
         overflow: visible;
     }
     .quick-filter-row__scroller .collection-filter-btn .pill__icon img {
-        height: 1.75rem;
+        height: 1.375rem;
         width: auto;
         max-width: none;
         max-height: none;
         object-fit: contain;
         border-radius: 0;
+    }
+
+    /* Smaller collection title + tighter gap to the filters below */
+    .main-collection-banner .heading-size--page-title {
+        font-size: calc(26px / 60 * var(--base-headings-primary-size) + 0px);
+    }
+    .main-collection-banner .gutter-bottom--page {
+        margin-bottom: 0.5rem;
     }
 
     .lap--grid--slider {

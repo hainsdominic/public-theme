@@ -18,13 +18,8 @@
 
 <div class="collection-heading">
 
-  <div class="collection-heading__actions hide lap-show">
-    <button id="collection-filters-handle" class="button button--outline button--fullwidth" aria-controls="site-filters-sidebar" aria-expanded="false" onclick="setTimeout(()=>{document.querySelectorAll('#FacetFiltersFormMobile show-more')?.forEach(elm=>{elm.init()})},10);document.getElementById('site-filters-sidebar').show()">
-      {{ 'collections.filter_and_sort' | t }}
-    </button>
-  </div>
 
-  <div class="collection-heading__text remove-empty-space {% if results.results_count %} hide {% endif %}">
+<div class="collection-heading__text remove-empty-space {% if results.results_count %} hide {% endif %}">
 
     {%- unless results.results_count -%}
       <span id="CollectionProductCount" class="collection-product-count" role="status">

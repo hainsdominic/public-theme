@@ -83,7 +83,7 @@
               <div class="collection-heading-container grid grid--layout grid-1 grid-palm-1 {{ heading_continer_mobile }}  {{ heading_continer_desktop }}">{%- render 'facets-header', results: collection -%}
                 {%- if section.settings.filter_collection != blank -%}
                   <div class="quick-filter-row additional_mobile">
-                    <span class="quick-filter-row__label text-size--small">Saveurs</span>
+                    <span class="quick-filter-row__label">Saveurs</span>
                     <div class="quick-filter-row__scroller">
                       {% for gym_collection in section.settings.filter_collection %}
                         {% render 'collection-filter-pill', collection: gym_collection, filter_type: 'flavor' %}
@@ -94,7 +94,7 @@
 
                 {%- if section.settings.filter_collection_machines != blank -%}
                   <div class="quick-filter-row additional_mobile">
-                    <span class="quick-filter-row__label text-size--small">Type de machine</span>
+                    <span class="quick-filter-row__label">Machine</span>
                     <div class="quick-filter-row__scroller">
                       {% for gym_collection_machine in section.settings.filter_collection_machines %}
                         {% render 'collection-filter-pill', collection: gym_collection_machine, filter_type: 'machine' %}
