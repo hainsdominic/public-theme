@@ -243,6 +243,38 @@
             column.style.height = `${maxHeight}px`;
         });
     });
+
+    // Guarantee a visible "peek" of the next pill so the filter rows read as
+    // horizontally swipeable, regardless of how each pill's width lands.
+    const filterScrollers = document.querySelectorAll('.quick-filter-row__scroller');
+    const PEEK = 22; // px of a pill that should always be cut off at the right edge
+    const MAX_INSET = 40;
+
+    const guaranteePeek = (scroller) => {
+      scroller.style.marginRight = '';
+      if (!window.matchMedia('(max-width: 767px)').matches) return;
+      if (scroller.scrollWidth - scroller.clientWidth <= 4) return; // fits, nothing to hint
+
+      const edge = scroller.getBoundingClientRect().right;
+      let hidden = null;
+      for (const pill of scroller.children) {
+        const r = pill.getBoundingClientRect();
+        if (r.left < edge && r.right > edge) { hidden = r.right - edge; break; }
+      }
+      if (hidden !== null && hidden >= PEEK) return; // already clearly cut
+
+      const inset = Math.min(MAX_INSET, hidden === null ? PEEK : PEEK - hidden);
+      if (inset > 0) scroller.style.marginRight = `${inset}px`;
+    };
+
+    const runPeek = () => filterScrollers.forEach(guaranteePeek);
+    runPeek();
+
+    let raf;
+    window.addEventListener('resize', () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(runPeek);
+    });
   });
 </script>
 

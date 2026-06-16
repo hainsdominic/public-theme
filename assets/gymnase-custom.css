@@ -328,7 +328,7 @@ ul li strong,
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: var(--color-text-main);
-        opacity: 0.55;
+        opacity: 0.9;
         line-height: 1.15;
     }
     .quick-filter-row__scroller {
@@ -343,8 +343,8 @@ ul li strong,
         scroll-padding-inline-start: 0.625rem;
         padding: 0.25rem 1rem 0.25rem 0.625rem;
         scrollbar-width: none;
-        -webkit-mask-image: linear-gradient(to right, transparent 0, #000 0.625rem);
-        mask-image: linear-gradient(to right, transparent 0, #000 0.625rem);
+        -webkit-mask-image: linear-gradient(to right, transparent 0, #000 0.625rem, #000 calc(100% - 2rem), transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0, #000 0.625rem, #000 calc(100% - 2rem), transparent 100%);
     }
     .quick-filter-row__scroller::-webkit-scrollbar {
         display: none;
